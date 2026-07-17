@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Gestore delle raccomandazioni del revisore"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Permette di rinominare (multilingue), riordinare e disattivare le raccomandazioni che il revisore sceglie al termine della revisione, senza modificare il core di OJS e preservando lo storico delle revisioni già effettuate."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configura l'elenco delle raccomandazioni mostrato ai revisori. Le modifiche valgono per questa rivista e restano multilingue. Lascia l'etichetta vuota in una lingua per mantenere il testo predefinito di OJS."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Attenzione nel rinominare le etichette"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Rinominare un'etichetta è retroattivo: le revisioni già inviate verranno mostrate con il nuovo testo in tutta la piattaforma (revisore, curatore, autore, e-mail e API). Se la modifica altera il SIGNIFICATO della risposta, è preferibile disattivare l'opzione precedente e riutilizzare un'opzione con 0 revisioni per il nuovo significato — così si evita di falsificare lo storico."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Raccomandazione originale di OJS"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Etichetta visualizzata"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Trascina gli elementi dalla maniglia ⠿ per definire l'ordine in cui compaiono nel modulo del revisore."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Disponibile nel modulo del revisore"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} revisione/i usano già questa opzione — rinominarla ne cambia la visualizzazione."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "0 revisioni usano questa opzione — è sicuro ridefinirla."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "La disattivazione rimuove l'opzione solo dal modulo del revisore. Il curatore continua a vedere questa raccomandazione nelle revisioni passate che l'hanno utilizzata."

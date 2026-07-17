@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Gestor de Recomendaciones del Revisor"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Permite renombrar (multilingüe), reordenar y desactivar las recomendaciones que el revisor elige al completar la revisión, sin modificar el núcleo de OJS y preservando el historial de las revisiones ya realizadas."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configure la lista de recomendaciones que se muestra a los revisores. Los cambios se aplican a esta revista y siguen siendo multilingües. Deje la etiqueta en blanco en un idioma para mantener el texto predeterminado de OJS."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Atención al renombrar etiquetas"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Renombrar una etiqueta es retroactivo: las revisiones ya enviadas se mostrarán con el nuevo texto en toda la plataforma (revisor, editor/a, autor/a, correos y API). Si el cambio altera el SIGNIFICADO de la respuesta, es preferible desactivar la opción antigua y reutilizar una opción con 0 revisiones para el nuevo significado — así se evita falsificar el registro."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Recomendación original de OJS"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Etiqueta mostrada"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Arrastre los elementos por el asa ⠿ para definir el orden en que aparecen en el formulario del revisor."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Disponible en el formulario del revisor"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} revisión(es) ya usan esta opción — renombrarla cambia cómo se muestran."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "0 revisiones usan esta opción — es seguro redefinirla."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Desactivar elimina la opción únicamente del formulario del revisor. El editor/a sigue viendo esta recomendación en las revisiones anteriores que la utilizaron."

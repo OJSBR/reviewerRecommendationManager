@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Verwaltung der Gutachter-Empfehlungen"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Ermöglicht es, die Empfehlungen, die Gutachter/innen beim Abschluss eines Gutachtens auswählen, umzubenennen (mehrsprachig), neu zu ordnen und zu deaktivieren — ohne Eingriff in den OJS-Kern und unter Wahrung der Historie bereits abgegebener Gutachten."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Konfigurieren Sie die Liste der Empfehlungen, die Gutachter/innen angezeigt wird. Die Änderungen gelten für diese Zeitschrift und bleiben mehrsprachig. Lassen Sie die Bezeichnung in einer Sprache leer, um den OJS-Standardtext beizubehalten."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Vorsicht beim Umbenennen von Bezeichnungen"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Das Umbenennen einer Bezeichnung wirkt rückwirkend: Bereits eingereichte Gutachten werden auf der gesamten Plattform mit dem neuen Text angezeigt (Gutachter/in, Redakteur/in, Autor/in, E-Mails und API). Wenn die Änderung die BEDEUTUNG der Antwort verändert, deaktivieren Sie besser die bisherige Option und verwenden Sie eine Option mit 0 Gutachten für die neue Bedeutung — so wird die Historie nicht verfälscht."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Ursprüngliche OJS-Empfehlung"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Angezeigte Bezeichnung"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Ziehen Sie die Einträge am Griff ⠿, um die Reihenfolge im Gutachtenformular festzulegen."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Im Gutachtenformular verfügbar"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} Gutachten verwenden diese Option bereits — das Umbenennen ändert deren Anzeige."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "0 Gutachten verwenden diese Option — eine Neudefinition ist unbedenklich."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Das Deaktivieren entfernt die Option nur aus dem Gutachtenformular. Redakteur/innen sehen diese Empfehlung weiterhin bei früheren Gutachten, die sie verwendet haben."
