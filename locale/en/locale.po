@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Reviewer Recommendation Manager"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Rename (multilingual), reorder and disable the recommendations a reviewer chooses when completing a review, without changing OJS core and preserving the history of past reviews."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configure the recommendation list shown to reviewers. Changes apply to this journal and remain multilingual. Leave a label blank in a language to keep the OJS default text."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Care when renaming labels"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Renaming a label is retroactive: reviews already submitted will display with the new text across the whole platform (reviewer, editor, author, e-mails and API). If the change alters the MEANING of the answer, prefer disabling the old option and repurposing an option with 0 reviews for the new meaning — this avoids falsifying the record."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Original OJS recommendation"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Displayed label"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Drag items by the ⠿ handle to set the order they appear in the reviewer form."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Available in the reviewer form"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} review(s) already use this option — renaming changes how they display."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "0 reviews use this option — safe to redefine."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Disabling removes the option only from the reviewer form. Editors still see this recommendation on past reviews that used it."

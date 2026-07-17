@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Gerenciador de Recomendações do Avaliador"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Permite renomear (multilíngue), reordenar e desativar as recomendações que o avaliador escolhe ao concluir a avaliação, sem alterar o núcleo do OJS e preservando o histórico das avaliações já realizadas."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configure a lista de recomendações apresentada ao avaliador. As alterações valem para esta revista e continuam multilíngues. Deixe o rótulo em branco em um idioma para manter o texto padrão do OJS."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Atenção ao alterar rótulos"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Renomear um rótulo é retroativo: os pareceres já emitidos passam a ser exibidos com o novo texto em toda a plataforma (avaliador, editor, autor, e-mails e API). Se a mudança altera o SENTIDO da resposta, prefira desativar a opção antiga e reaproveitar uma opção com 0 pareceres para o novo significado — assim o histórico não é falsificado."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Recomendação original do OJS"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Rótulo exibido"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Arraste os itens pelo ícone ⠿ para definir a ordem em que aparecem no formulário do avaliador."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Disponível no formulário do avaliador"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} parecer(es) já usam esta opção — renomear muda a exibição deles."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "0 pareceres usam esta opção — seguro redefinir."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Desativar remove a opção apenas do formulário do avaliador. O editor continua vendo essa recomendação nos pareceres antigos que a utilizaram."
