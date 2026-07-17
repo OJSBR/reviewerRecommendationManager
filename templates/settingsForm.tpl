@@ -11,11 +11,14 @@
 		$('#reviewerRecommendationManagerSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 
 		var $list = $('#rrmSortable');
+
 		function rrmRenumber() {ldelim}
-			$list.children('.rrmItem').each(function(i) {ldelim}
+			$list.children('.rrmCard').each(function(i) {ldelim}
 				$(this).find('.rrmOrder').val(i + 1);
+				$(this).find('.rrmPos').text(i + 1);
 			{rdelim});
 		{rdelim}
+
 		if ($.fn.sortable) {ldelim}
 			$list.sortable({ldelim}
 				handle: '.rrmHandle',
@@ -27,22 +30,93 @@
 				update: rrmRenumber
 			{rdelim});
 		{rdelim}
+
+		// Estado visual "desativada" no card inteiro, pra não restar dúvida do que está ligado.
+		$list.on('change', '.rrmToggle input[type="checkbox"]', function() {ldelim}
+			$(this).closest('.rrmCard').toggleClass('rrmCard--off', !this.checked);
+		{rdelim});
+		$list.find('.rrmToggle input[type="checkbox"]').each(function() {ldelim}
+			$(this).closest('.rrmCard').toggleClass('rrmCard--off', !this.checked);
+		{rdelim});
+
 		rrmRenumber();
 	{rdelim});
 </script>
 
 <style>
-	#rrmSortable {ldelim} list-style:none; margin:0; padding:0; {rdelim}
-	.rrmItem {ldelim} display:flex; align-items:flex-start; gap:1em; padding:1em; margin:.5em 0; border:1px solid #ddd; border-radius:4px; background:#fff; {rdelim}
-	.rrmHandle {ldelim} cursor:move; color:#999; font-size:1.3em; line-height:1; padding-top:.2em; user-select:none; {rdelim}
-	.rrmHandle:hover {ldelim} color:#555; {rdelim}
-	.rrmItem.ui-sortable-helper {ldelim} box-shadow:0 4px 12px rgba(0,0,0,.15); {rdelim}
-	.rrmPlaceholder {ldelim} border:2px dashed #bbb; border-radius:4px; margin:.5em 0; background:#f4f4f4; {rdelim}
-	.rrmBody {ldelim} flex:1 1 auto; {rdelim}
-	.rrmOriginal {ldelim} display:inline-flex; align-items:center; gap:.5em; margin:0 0 .8em; padding:.3em .7em; background:#eef3fb; border-left:4px solid #3a6ea5; border-radius:3px; {rdelim}
-	.rrmOriginalTag {ldelim} font-size:.75em; text-transform:uppercase; letter-spacing:.04em; color:#3a6ea5; font-weight:600; {rdelim}
-	.rrmOriginalText {ldelim} font-size:1.05em; color:#12263a; {rdelim}
-	.rrmRow {ldelim} display:flex; flex-wrap:wrap; gap:1.5em; align-items:flex-start; {rdelim}
+	/* ---- lista ---- */
+	#rrmSortable {ldelim} list-style:none; margin:1em 0 0; padding:0; {rdelim}
+
+	/* ---- card ---- */
+	.rrmCard {ldelim}
+		list-style:none; background:#fff; border:1px solid #d8dee4; border-radius:8px;
+		margin:0 0 1.15em; overflow:hidden; box-shadow:0 1px 2px rgba(27,31,35,.05);
+		transition:border-color .15s, opacity .15s;
+	{rdelim}
+	.rrmCard:hover {ldelim} border-color:#b6c2cd; {rdelim}
+	.rrmCard.ui-sortable-helper {ldelim} box-shadow:0 8px 24px rgba(27,31,35,.18); border-color:#3a6ea5; {rdelim}
+	.rrmPlaceholder {ldelim} border:2px dashed #b6c2cd; border-radius:8px; background:#f2f5f8; margin:0 0 1.15em; {rdelim}
+	.rrmCard--off {ldelim} opacity:.72; background:#fbfbfc; {rdelim}
+	.rrmCard--off .rrmCardHead {ldelim} background:#f2f3f5; {rdelim}
+
+	/* ---- cabeçalho do card: identidade do item ---- */
+	.rrmCardHead {ldelim}
+		display:flex; align-items:center; gap:.85em;
+		padding:.85em 1.1em; background:#f4f7fb; border-bottom:1px solid #e3e9ef;
+	{rdelim}
+	.rrmHandle {ldelim}
+		cursor:grab; color:#8a97a4; font-size:1.25em; line-height:1;
+		user-select:none; padding:.15em .1em; flex:0 0 auto;
+	{rdelim}
+	.rrmHandle:active {ldelim} cursor:grabbing; {rdelim}
+	.rrmHandle:hover {ldelim} color:#3a6ea5; {rdelim}
+	.rrmPos {ldelim}
+		flex:0 0 auto; min-width:1.9em; height:1.9em; line-height:1.9em; text-align:center;
+		background:#3a6ea5; color:#fff; border-radius:50%; font-size:.8em; font-weight:700;
+	{rdelim}
+	.rrmIdent {ldelim} flex:1 1 auto; min-width:0; {rdelim}
+	.rrmIdentTag {ldelim}
+		display:block; font-size:.68em; text-transform:uppercase; letter-spacing:.06em;
+		color:#61707e; font-weight:700; margin-bottom:.15em;
+	{rdelim}
+	.rrmIdentText {ldelim} display:block; font-size:1.12em; font-weight:700; color:#16232f; line-height:1.25; {rdelim}
+
+	/* ---- selo de impacto ---- */
+	.rrmBadge {ldelim}
+		flex:0 0 auto; font-size:.8em; line-height:1.3; padding:.35em .75em; border-radius:999px;
+		max-width:16em; text-align:right;
+	{rdelim}
+	.rrmBadge--warn {ldelim} background:#fdecea; color:#96231f; border:1px solid #f2c4bf; {rdelim}
+	.rrmBadge--ok {ldelim} background:#eef5ef; color:#4a6b4d; border:1px solid #cfe3d1; {rdelim}
+
+	/* ---- corpo do card ---- */
+	.rrmCardBody {ldelim} padding:1.1em; {rdelim}
+	.rrmField {ldelim} margin:0 0 1em; {rdelim}
+	.rrmField > label, .rrmFieldLabel {ldelim}
+		display:block; font-weight:600; color:#33414e; margin-bottom:.35em; font-size:.92em;
+	{rdelim}
+	/* o campo multilíngue ocupa a largura toda, sem apertar */
+	.rrmField input[type="text"] {ldelim} width:100%; box-sizing:border-box; {rdelim}
+
+	/* ---- faixa exclusiva do checkbox: sem ambiguidade de dono ---- */
+	.rrmToggle {ldelim}
+		display:flex; align-items:center; gap:.65em;
+		padding:.7em .9em; background:#f6f8fa; border:1px solid #e1e6eb; border-radius:6px;
+	{rdelim}
+	.rrmToggle ul, .rrmToggle ol, .rrmToggle li {ldelim}
+		list-style:none !important; margin:0 !important; padding:0 !important; display:inline;
+	{rdelim}
+	.rrmToggle input[type="checkbox"] {ldelim} margin:0 .2em 0 0; {rdelim}
+	.rrmToggle label {ldelim} margin:0; font-weight:600; color:#33414e; cursor:pointer; {rdelim}
+	.rrmCard--off .rrmToggle {ldelim} background:#f0f1f3; border-color:#dcdfe3; {rdelim}
+
+	/* ---- avisos do topo ---- */
+	.rrmNotice {ldelim}
+		margin:1em 0; padding:.9em 1.1em; border:1px solid #e6cf6a; border-left:4px solid #d8b520;
+		background:#fffbe9; border-radius:6px; line-height:1.5;
+	{rdelim}
+	.rrmNotice strong {ldelim} color:#6b5600; {rdelim}
+	.rrmHint {ldelim} color:#61707e; margin:.6em 0 0; font-size:.93em; {rdelim}
 </style>
 
 <form
@@ -56,63 +130,60 @@
 
 	<div id="description">{translate key="plugins.generic.reviewerRecommendationManager.settings.description"}</div>
 
-	<div class="pkpNotification pkpNotification--warning" style="margin:1em 0; padding:1em; border:1px solid #e0c200; background:#fff8d5;">
-		<p><strong>{translate key="plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"}</strong><br />
-		{translate key="plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"}</p>
+	<div class="rrmNotice">
+		<strong>{translate key="plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"}</strong><br />
+		{translate key="plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"}
 	</div>
 
-	<p style="color:#777;">{translate key="plugins.generic.reviewerRecommendationManager.settings.dragHint"}</p>
+	<p class="rrmHint">{translate key="plugins.generic.reviewerRecommendationManager.settings.dragHint"}</p>
 
 	{fbvFormArea id="reviewerRecommendationManagerArea"}
 		<ol id="rrmSortable">
 			{foreach from=$recommendations item=rec}
-				<li class="rrmItem" data-code="{$rec.code}">
-					<span class="rrmHandle" title="{translate key="plugins.generic.reviewerRecommendationManager.settings.dragHint"}">&#9776;</span>
-					<input type="hidden" name="order_{$rec.code}" value="{$rec.order|escape}" class="rrmOrder" />
-					<div class="rrmBody">
-						<div class="rrmOriginal">
-							<span class="rrmOriginalTag">{translate key="plugins.generic.reviewerRecommendationManager.settings.originalLabel"}</span>
-							<strong class="rrmOriginalText">{$rec.original|escape}</strong>
+				<li class="rrmCard" data-code="{$rec.code}">
+
+					<div class="rrmCardHead">
+						<span class="rrmHandle" title="{translate key="plugins.generic.reviewerRecommendationManager.settings.dragHint"}">&#9776;</span>
+						<span class="rrmPos">{$rec.order|escape}</span>
+						<input type="hidden" name="order_{$rec.code}" value="{$rec.order|escape}" class="rrmOrder" />
+
+						<span class="rrmIdent">
+							<span class="rrmIdentTag">{translate key="plugins.generic.reviewerRecommendationManager.settings.originalLabel"}</span>
+							<span class="rrmIdentText">{$rec.original|escape}</span>
+						</span>
+
+						{if $rec.usage > 0}
+							<span class="rrmBadge rrmBadge--warn">{translate key="plugins.generic.reviewerRecommendationManager.settings.usageWarning" usage=$rec.usage}</span>
+						{else}
+							<span class="rrmBadge rrmBadge--ok">{translate key="plugins.generic.reviewerRecommendationManager.settings.usageSafe"}</span>
+						{/if}
+					</div>
+
+					<div class="rrmCardBody">
+						<div class="rrmField">
+							{fbvElement
+								type="text"
+								multilingual=true
+								name="label_`$rec.code`"
+								id="label_`$rec.code`"
+								value=$rec.label
+								label="plugins.generic.reviewerRecommendationManager.settings.customLabel"
+								size=$fbvStyles.size.LARGE
+							}
 						</div>
-						<div class="rrmRow">
 
-							<div style="flex:1 1 320px; min-width:280px;">
-								{fbvElement
-									type="text"
-									multilingual=true
-									name="label_`$rec.code`"
-									id="label_`$rec.code`"
-									value=$rec.label
-									label="plugins.generic.reviewerRecommendationManager.settings.customLabel"
-									size=$fbvStyles.size.LARGE
-								}
-							</div>
-
-							<div style="flex:0 0 200px; padding-top:1.6em;">
-								{fbvElement
-									type="checkbox"
-									name="enabled_`$rec.code`"
-									id="enabled_`$rec.code`"
-									value="1"
-									checked=$rec.enabled
-									label="plugins.generic.reviewerRecommendationManager.settings.enabled"
-								}
-							</div>
-
-							<div style="flex:1 1 220px; padding-top:1.6em;">
-								{if $rec.usage > 0}
-									<span class="pkp_form_error" style="color:#d00;">
-										{translate key="plugins.generic.reviewerRecommendationManager.settings.usageWarning" usage=$rec.usage}
-									</span>
-								{else}
-									<span style="color:#777;">
-										{translate key="plugins.generic.reviewerRecommendationManager.settings.usageSafe"}
-									</span>
-								{/if}
-							</div>
-
+						<div class="rrmToggle">
+							{fbvElement
+								type="checkbox"
+								name="enabled_`$rec.code`"
+								id="enabled_`$rec.code`"
+								value="1"
+								checked=$rec.enabled
+								label="plugins.generic.reviewerRecommendationManager.settings.enabled"
+							}
 						</div>
 					</div>
+
 				</li>
 			{/foreach}
 		</ol>
@@ -120,5 +191,5 @@
 
 	{fbvFormButtons}
 
-	<p><span class="formRequired">{translate key="plugins.generic.reviewerRecommendationManager.settings.disableNote"}</span></p>
+	<p class="rrmHint">{translate key="plugins.generic.reviewerRecommendationManager.settings.disableNote"}</p>
 </form>
