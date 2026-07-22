@@ -1,25 +1,29 @@
 # Reviewer Recommendation Manager — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.2.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.3.0-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.2.0/reviewerRecommendationManager-1.0.2.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.2.0-ojs3.4/reviewerRecommendationManager-1.0.2.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.3.0/reviewerRecommendationManager-1.0.3.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.3.0-ojs3.4/reviewerRecommendationManager-1.0.3.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that lets a journal **rename
 (multilingual), reorder and disable** the recommendations a reviewer picks when completing a
 review (Accept, Revisions Required, Resubmit, Decline, See Comments, …) — **without patching
 OJS core** and **preserving the historical record** of reviews already submitted.
 
-> **Developed and maintained by [OJSBR](https://ojsbr.com.br).** See the
+> **Developed and maintained by [OJSBR](https://ojsbr.com).** See the
 > [Credits & authorship](#credits--authorship) section below.
 
 ## Compatibility & branches
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.2.0 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.2.0-ojs3.4 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.3.0 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.3.0-ojs3.4 |
+
+> **OJS 3.6 note.** PKP has implemented customizable reviewer recommendations in the core
+> for OJS 3.6 ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)). This plugin
+> targets **OJS 3.4 and 3.5**, where the six recommendations are still hard-coded.
 
 ## What it does
 
@@ -64,9 +68,17 @@ when renaming affects existing reviews.
 - Works over the **six native recommendation codes** (1–6); it does not add new codes, which
   keeps it fully core- and upgrade-compatible. Disabling the plugin restores default behavior.
 
+## Tests
+
+A functional [Cypress](https://www.cypress.io/) test lives in
+`cypress/tests/functional/ReviewerRecommendationManager.cy.js`. It enables the plugin, opens
+its settings, renames one recommendation, disables another, saves and reopens the form to
+assert both changes were persisted, following the conventions of the tests shipped with OJS
+plugins.
+
 ## Credits & authorship
 
-- **Developed and maintained by** [OJSBR](https://ojsbr.com.br) — original plugin.
+- **Developed and maintained by** [OJSBR](https://ojsbr.com) — original plugin.
 - Distributed under the **GNU GPL v3**.
 
 ## Contributing
@@ -87,15 +99,15 @@ Plugin genérico para o **Open Journal Systems (OJS)** que permite à revista **
 avaliação (Aceitar, Correções obrigatórias, Submeter novamente, Rejeitar, Ver comentários…) —
 **sem alterar o núcleo do OJS** e **preservando o histórico** dos pareceres já emitidos.
 
-> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com.br).** Veja a seção
+> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Veja a seção
 > [Créditos e autoria](#créditos-e-autoria) abaixo.
 
 ### Compatibilidade e branches
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.0.2.0 |
-| OJS 3.4.x     | `stable-3_4_0` | 1.0.2.0-ojs3.4 |
+| OJS 3.5.x     | `stable-3_5_0` *(padrão)* | 1.0.3.0 |
+| OJS 3.4.x     | `stable-3_4_0` | 1.0.3.0-ojs3.4 |
 
 ### O que faz
 
@@ -127,9 +139,16 @@ selo de impacto avisa quando o renomear afeta pareceres existentes.
 > e reaproveitar uma opção com **0 pareceres** para o novo significado — assim o histórico
 > não é falsificado.
 
+### Testes
+
+Um teste funcional [Cypress](https://www.cypress.io/) fica em
+`cypress/tests/functional/ReviewerRecommendationManager.cy.js`. Ele habilita o plugin, abre as
+configurações, renomeia uma recomendação, desativa outra, salva e reabre o formulário para
+conferir que as duas mudanças persistiram.
+
 ### Créditos e autoria
 
-- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com.br) — plugin autoral.
+- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com) — plugin autoral.
 - Distribuído sob a **GNU GPL v3**.
 
 ### Licença

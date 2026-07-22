@@ -3,13 +3,13 @@
 /**
  * @file ReviewerRecommendationManagerPlugin.php
  *
- * Plugin autoral OJSBR.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerRecommendationManagerPlugin
  *
- * @brief Permite renomear (multilíngue), reordenar e desativar as recomendações
- *        do avaliador, sem alterar o núcleo do OJS e preservando o histórico.
+ * @brief Lets a journal rename (multilingual), reorder and disable the reviewer
+ *        recommendations without patching OJS core, preserving review history.
  */
 
 namespace APP\plugins\generic\reviewerRecommendationManager;
@@ -30,10 +30,10 @@ use PKP\submission\reviewAssignment\ReviewAssignment;
 
 class ReviewerRecommendationManagerPlugin extends GenericPlugin
 {
-    /** Pasta (dentro do files_dir do contexto) onde os .po de sobrescrita são gravados. */
+    /** Folder (inside the context files_dir) where the override .po files are written. */
     public const OVERRIDE_FOLDER = 'reviewerRecommendations';
 
-    /** Template do passo 3 do avaliador — onde a lista de recomendações é montada. */
+    /** Reviewer step 3 template, where the recommendation list is built. */
     public const REVIEWER_STEP3_TEMPLATE = 'reviewer/review/step3.tpl';
 
     /**
@@ -50,18 +50,18 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
             return true;
         }
 
-        // 1) Renomear: registra os .po de sobrescrita (por contexto) com prioridade máxima.
+        // 1) Rename: register the per-context override .po files with top priority.
         $this->registerLabelOverrides();
 
-        // 2) Reordenar / desativar: ajusta a lista SÓ no formulário do avaliador.
+        // 2) Reorder / disable: adjust the list in the reviewer form only.
         Hook::add('TemplateManager::fetch', [$this, 'filterReviewerForm']);
 
         return true;
     }
 
     /**
-     * Registra a pasta de sobrescrita de traduções do contexto atual, se existir.
-     * A pasta é per-contexto (ContextFileManager), então cada revista vê só os seus rótulos.
+     * Register the current context's translation override folder, if it exists.
+     * The folder is per context (ContextFileManager), so each journal only sees its own labels.
      */
     public function registerLabelOverrides(): void
     {
@@ -72,9 +72,9 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * Hook TemplateManager::fetch — reordena e remove as opções desativadas
-     * na variável passada ao template do passo 3 do avaliador. Não toca no HTML,
-     * apenas na variável antes do render, e não afeta a visão do editor.
+     * TemplateManager::fetch hook: reorders and removes disabled options in the
+     * variable passed to the reviewer step 3 template. It never touches the HTML,
+     * only the variable before rendering, and does not affect the editor's view.
      */
     public function filterReviewerForm(string $hookName, array $args): bool
     {
@@ -97,14 +97,14 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
         }
         $contextId = $context->getId();
 
-        // Preserva a entrada "Escolha uma opção" ('') sempre no topo.
+        // Always keep the "Choose One" entry ('') at the top.
         $chooseOne = [];
         if (array_key_exists('', $options)) {
             $chooseOne[''] = $options[''];
             unset($options['']);
         }
 
-        // Remove desativadas e ordena pelo campo de ordem configurado.
+        // Drop disabled options and sort by the configured order.
         $codes = array_keys($options);
         $ordered = [];
         foreach ($codes as $code) {
@@ -128,7 +128,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * Mapa código => chave de locale nativa das 6 recomendações (sem a entrada '').
+     * Map of code => native locale key for the six recommendations (excluding '').
      *
      * @return array<int, string>
      */
@@ -140,8 +140,8 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * Rótulo ORIGINAL do OJS para uma chave, ignorando a sobrescrita do plugin.
-     * Serve de âncora de referência na tela de configuração (nunca renomeado).
+     * The ORIGINAL OJS label for a key, ignoring this plugin's override.
+     * Used as a fixed reference anchor on the settings screen (never renamed).
      */
     public function getOriginalLabel(string $key, ?string $locale = null): string
     {
@@ -151,7 +151,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
         $storagePath = $this->getOverrideStoragePath(false);
         $storagePath = $storagePath ? realpath($storagePath) : false;
         if ($storagePath) {
-            // Remove as entradas de sobrescrita do plugin para recuperar a tradução nativa.
+            // Drop the plugin's override paths to recover the native translation.
             $entries = array_filter(
                 $bundle->getEntries(),
                 fn (string $path) => !str_starts_with($path, $storagePath),
@@ -165,7 +165,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * Rótulos customizados de um código (array locale => texto), ou [] se não configurado.
+     * Custom labels for a code (locale => text array), or [] when not configured.
      */
     public function getCustomLabels(int $contextId, int $code): array
     {
@@ -176,7 +176,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     public function isRecommendationEnabled(int $contextId, int $code): bool
     {
         $value = $this->getSetting($contextId, "enabled_{$code}");
-        // Ausência de configuração => habilitada por padrão (comportamento nativo).
+        // No configuration means enabled by default (native behaviour).
         return $value === null ? true : (bool) $value;
     }
 
@@ -187,9 +187,9 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * Caminho da pasta de sobrescrita de traduções do contexto atual.
+     * Path to the current context's translation override folder.
      *
-     * @param bool $create Cria a pasta base do contexto se não existir.
+     * @param bool $create Create the context base folder when it does not exist.
      */
     public function getOverrideStoragePath(bool $create = false): ?string
     {
@@ -206,9 +206,9 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * Regenera os arquivos .po de sobrescrita a partir dos rótulos configurados.
-     * Só grava a chave quando há rótulo customizado não-vazio para aquele idioma;
-     * caso contrário mantém a tradução nativa do OJS.
+     * Regenerate the override .po files from the configured labels.
+     * A key is only written when a non-empty custom label exists for that locale;
+     * otherwise the native OJS translation is kept.
      */
     public function regenerateOverrideFiles(int $contextId): void
     {
@@ -248,12 +248,12 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
             }
         }
 
-        // Invalida caches de bundle para refletir os novos rótulos já nesta requisição.
+        // Invalidate the locale bundle caches so the new labels apply in this request.
         Locale::registerPath($basePath, PHP_INT_MAX);
     }
 
     /**
-     * Contagem de pareceres históricos por recomendação, no contexto (para o aviso de impacto).
+     * Count of historical reviews per recommendation in this context (impact warning).
      *
      * @return array<int, int> código => número de pareceres já emitidos
      */

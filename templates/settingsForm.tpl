@@ -4,12 +4,12 @@
  * Plugin autoral OJSBR.
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * Configuração das recomendações do avaliador (renomear / reordenar / desativar).
+ * Reviewer recommendation settings (rename / reorder / disable).
  *
- * NOTA: o checkbox é escrito à mão de propósito. O {fbvElement type="checkbox"} da PKP
- * renderiza um <li> cru (lib/pkp/templates/form/checkbox.tpl) e só é válido dentro de
- * {fbvFormSection list=true}, que o embrulha num <ul>. Dentro dos cards, esse <li> era
- * expulso pelo parser de HTML e acabava colado no item seguinte.
+ * NOTE: the checkbox is written by hand on purpose. PKP's {fbvElement type="checkbox"}
+ * renders a bare <li> (lib/pkp/templates/form/checkbox.tpl) and is only valid inside
+ * {fbvFormSection list=true}, which wraps it in a <ul>. Inside the cards that <li> was
+ * hoisted out by the HTML parser and ended up attached to the next item.
  *}
 <script>
 	$(function() {ldelim}

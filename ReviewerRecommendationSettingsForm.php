@@ -8,8 +8,8 @@
  *
  * @class ReviewerRecommendationSettingsForm
  *
- * @brief Formulário multilíngue para renomear, reordenar e desativar as
- *        recomendações do avaliador.
+ * @brief Multilingual form to rename, reorder and disable the reviewer
+ *        recommendations.
  */
 
 namespace APP\plugins\generic\reviewerRecommendationManager;
@@ -29,7 +29,7 @@ class ReviewerRecommendationSettingsForm extends Form
     }
 
     /**
-     * Códigos das recomendações (1..6) na ordem nativa.
+     * Recommendation codes (1..6) in their native order.
      *
      * @return array<int, string>
      */
@@ -39,7 +39,7 @@ class ReviewerRecommendationSettingsForm extends Form
     }
 
     /**
-     * Rótulos (label_1..label_6) são campos localizados.
+     * Labels (label_1..label_6) are localized fields.
      */
     public function getLocaleFieldNames(): array
     {
@@ -101,7 +101,7 @@ class ReviewerRecommendationSettingsForm extends Form
             ];
         }
 
-        // Renderiza na ordem salva para o arrastar-e-soltar refletir o estado atual.
+        // Render in the saved order so drag-and-drop reflects the current state.
         usort($recommendations, fn ($a, $b) => $a['order'] <=> $b['order']);
 
         $templateMgr->assign([
@@ -129,7 +129,7 @@ class ReviewerRecommendationSettingsForm extends Form
             $this->plugin->updateSetting($this->contextId, "order_{$code}", $order, 'int');
         }
 
-        // Regera os .po de sobrescrita a partir dos rótulos salvos.
+        // Regenerate the override .po files from the saved labels.
         $this->plugin->regenerateOverrideFiles($this->contextId);
 
         parent::execute(...$functionArgs);
