@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: zh_Hans\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "审稿推荐意见管理器"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "对审稿人在完成审稿时所选的推荐意见进行多语言重命名、排序和停用，无需改动 OJS 内核，并保留历史审稿记录。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "配置向审稿人显示的推荐意见列表。更改仅作用于本期刊，并保持多语言。在某种语言下留空标签，即保留 OJS 的默认文本。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "重命名标签时请谨慎"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "重命名标签具有追溯效力：已提交的审稿将在整个平台（审稿人、编辑、作者、邮件和 API）以新文本显示。如果改动改变了答案的“含义”，更稳妥的做法是停用旧选项，并把一个 0 份审稿的选项改作新含义——这样就不会篡改记录。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "OJS 原始推荐意见"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "显示标签"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "用 ⠿ 手柄拖动条目，设定它们在审稿表单中的显示顺序。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "可在审稿表单中使用"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "已有 {$usage} 份审稿使用此选项——重命名会改变它们的显示方式。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "没有任何审稿使用此选项——可以安全地重新定义。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "停用只会从审稿表单中移除该选项。编辑在使用过该选项的历史审稿中仍会看到此推荐意见。"

@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: da\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Håndtering af bedømmeranbefalinger"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Omdøb (flersproget), omarranger og deaktiver de anbefalinger, en bedømmer vælger, når bedømmelsen afsluttes — uden at ændre OJS-kernen og med bevaret historik for tidligere bedømmelser."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Konfigurer listen over anbefalinger, som bedømmerne ser. Ændringerne gælder dette tidsskrift og forbliver flersprogede. Lad etiketten stå tom på et sprog for at beholde OJS' standardtekst."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Vær opmærksom ved omdøbning af etiketter"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Omdøbning af en etiket er tilbagevirkende: allerede indsendte bedømmelser vises med den nye tekst i hele platformen (bedømmer, redaktør, forfatter, e-mails og API). Hvis ændringen ændrer svarets BETYDNING, er det bedre at deaktivere den gamle mulighed og bruge en mulighed med 0 bedømmelser til den nye betydning — så forfalskes registreringen ikke."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Oprindelig OJS-anbefaling"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Vist etiket"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Træk elementerne i håndtaget ⠿ for at bestemme rækkefølgen i bedømmerformularen."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Tilgængelig i bedømmerformularen"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} bedømmelser bruger allerede denne mulighed — omdøbning ændrer, hvordan de vises."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Ingen bedømmelser bruger denne mulighed — den kan trygt omdefineres."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Deaktivering fjerner kun muligheden fra bedømmerformularen. Redaktørerne ser fortsat denne anbefaling i tidligere bedømmelser, der brugte den."

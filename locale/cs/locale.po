@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: cs\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Správce doporučení recenzentů"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Přejmenování (vícejazyčné), změna pořadí a vypnutí doporučení, která recenzent volí při dokončení recenze — bez zásahu do jádra OJS a se zachováním historie dřívějších recenzí."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Nastavte seznam doporučení zobrazovaný recenzentům. Změny platí pro tento časopis a zůstávají vícejazyčné. Ponechte popisek v některém jazyce prázdný, chcete-li zachovat výchozí text OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Pozor při přejmenování popisků"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Přejmenování popisku je zpětné: již odeslané recenze se v celé platformě zobrazí s novým textem (recenzent, editor, autor, e-maily i API). Pokud změna mění VÝZNAM odpovědi, raději vypněte starou možnost a pro nový význam použijte možnost s 0 recenzemi — vyhnete se tak zkreslení záznamu."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Původní doporučení OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Zobrazený popisek"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Přetažením položek za úchyt ⠿ nastavíte pořadí, v jakém se objeví ve formuláři recenzenta."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Dostupné ve formuláři recenzenta"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "Tuto možnost už používá {$usage} recenzí — přejmenování změní, jak se zobrazují."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Tuto možnost nepoužívá žádná recenze — lze ji bezpečně předefinovat."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Vypnutí odebere možnost pouze z formuláře recenzenta. Editoři nadále vidí toto doporučení u dřívějších recenzí, které je použily."

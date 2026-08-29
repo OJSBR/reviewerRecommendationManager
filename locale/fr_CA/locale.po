@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fr_CA\n"
+
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Gestionnaire des recommandations d'évaluation"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Renommer (de façon multilingue), réordonner et désactiver les recommandations qu'un évaluateur choisit au moment de terminer une évaluation, sans modifier le noyau d'OJS et en préservant l'historique des évaluations passées."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configurez la liste des recommandations présentée aux évaluateurs. Les changements s'appliquent à cette revue et restent multilingues. Laissez un libellé vide dans une langue pour conserver le texte par défaut d'OJS."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Attention en renommant les libellés"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Renommer un libellé est rétroactif : les évaluations déjà soumises s'afficheront avec le nouveau texte dans toute la plateforme (évaluateur, rédacteur, auteur, courriels et API). Si le changement modifie le SENS de la réponse, préférez désactiver l'ancienne option et réaffecter une option comptant 0 évaluation au nouveau sens — cela évite de fausser le registre."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Recommandation d'origine d'OJS"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Libellé affiché"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Faites glisser les éléments par la poignée ⠿ pour définir l'ordre dans lequel ils apparaissent dans le formulaire d'évaluation."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Disponible dans le formulaire d'évaluation"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} évaluation(s) utilisent déjà cette option — la renommer change leur affichage."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Aucune évaluation n'utilise cette option — elle peut être redéfinie sans risque."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "La désactivation retire l'option du seul formulaire d'évaluation. Les rédacteurs continuent de voir cette recommandation dans les évaluations passées qui l'ont utilisée."

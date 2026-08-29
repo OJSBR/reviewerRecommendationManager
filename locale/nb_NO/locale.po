@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: nb_NO\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Behandling av fagfelleanbefalinger"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Gi nytt navn (flerspråklig), endre rekkefølge på og deaktivere anbefalingene en fagfelle velger når vurderingen fullføres – uten å endre OJS-kjernen og med historikken for tidligere vurderinger bevart."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Konfigurer listen over anbefalinger som vises for fagfellene. Endringene gjelder dette tidsskriftet og forblir flerspråklige. La etiketten stå tom på et språk for å beholde OJS' standardtekst."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Vær forsiktig når du gir etiketter nytt navn"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Å gi en etikett nytt navn virker tilbake i tid: allerede innsendte vurderinger vises med den nye teksten i hele plattformen (fagfelle, redaktør, forfatter, e-post og API). Hvis endringen endrer svarets BETYDNING, bør du heller deaktivere det gamle alternativet og bruke et alternativ med 0 vurderinger til den nye betydningen – slik forfalskes ikke registreringen."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Opprinnelig OJS-anbefaling"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Vist etikett"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Dra elementene i håndtaket ⠿ for å bestemme rekkefølgen de vises i på fagfelleskjemaet."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Tilgjengelig i fagfelleskjemaet"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} vurderinger bruker allerede dette alternativet – å gi det nytt navn endrer hvordan de vises."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Ingen fagfellevurderinger bruker dette alternativet – det kan trygt defineres på nytt."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Deaktivering fjerner alternativet bare fra fagfelleskjemaet. Redaktørene ser fortsatt denne anbefalingen i tidligere vurderinger som brukte den."

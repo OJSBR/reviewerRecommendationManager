@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ca\n"
+
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Gestor de recomanacions de revisió"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Reanomena (de manera multilingüe), reordena i desactiva les recomanacions que un revisor tria en completar una revisió, sense modificar el nucli de l'OJS i preservant l'historial de les revisions anteriors."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configura la llista de recomanacions que es mostra als revisors. Els canvis s'apliquen a aquesta revista i continuen sent multilingües. Deixeu l'etiqueta en blanc en una llengua per mantenir el text per defecte de l'OJS."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Compte en reanomenar les etiquetes"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Reanomenar una etiqueta és retroactiu: les revisions ja enviades es mostraran amb el text nou a tota la plataforma (revisor, editor, autor, correus i API). Si el canvi altera el SIGNIFICAT de la resposta, val més desactivar l'opció antiga i reutilitzar una opció amb 0 revisions per al significat nou: així no es falseja el registre."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Recomanació original de l'OJS"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Etiqueta mostrada"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Arrossegueu els elements per la nansa ⠿ per definir l'ordre en què apareixen al formulari de revisió."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Disponible al formulari de revisió"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "Aquesta opció ja s'utilitza en {$usage} revisions: reanomenar-la canvia com es mostren."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Cap revisió no fa servir aquesta opció: es pot redefinir sense problemes."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Desactivar-la només treu l'opció del formulari de revisió. Els editors continuen veient aquesta recomanació a les revisions anteriors que la van fer servir."

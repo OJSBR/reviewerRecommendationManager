@@ -1,10 +1,10 @@
 # Reviewer Recommendation Manager — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.3.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.3.2-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.3.1/reviewerRecommendationManager-1.0.3.1.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.3.1-ojs3.4/reviewerRecommendationManager-1.0.3.1-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.3.2/reviewerRecommendationManager-1.0.3.2.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.3.1-ojs3.4/reviewerRecommendationManager-1.0.3.1-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that lets a journal **rename
 (multilingual), reorder and disable** the recommendations a reviewer picks when completing a
@@ -18,7 +18,7 @@ OJS core** and **preserving the historical record** of reviews already submitted
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.3.0 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.3.2 |
 | OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.3.0-ojs3.4 |
 
 > **OJS 3.6 note.** PKP has implemented customizable reviewer recommendations in the core

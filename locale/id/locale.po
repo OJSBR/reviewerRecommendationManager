@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: id\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Pengelola Rekomendasi Penelaah"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Mengganti nama (multibahasa), menyusun ulang, dan menonaktifkan rekomendasi yang dipilih penelaah saat menyelesaikan telaah, tanpa mengubah inti OJS dan dengan tetap menjaga riwayat telaah terdahulu."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Atur daftar rekomendasi yang ditampilkan kepada penelaah. Perubahan berlaku untuk jurnal ini dan tetap multibahasa. Biarkan label kosong pada suatu bahasa untuk mempertahankan teks bawaan OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Hati-hati saat mengganti nama label"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Mengganti nama label bersifat surut: telaah yang sudah dikirim akan tampil dengan teks baru di seluruh platform (penelaah, editor, penulis, surel, dan API). Jika perubahan mengubah MAKNA jawaban, sebaiknya nonaktifkan opsi lama dan gunakan opsi dengan 0 telaah untuk makna yang baru — ini menghindari pemalsuan catatan."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Rekomendasi asli OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Label yang ditampilkan"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Seret item pada gagang ⠿ untuk menentukan urutan tampilnya di formulir penelaah."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Tersedia di formulir penelaah"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} telaah sudah memakai opsi ini — mengganti namanya mengubah tampilannya."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Tidak ada telaah yang memakai opsi ini — aman untuk didefinisikan ulang."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Menonaktifkan hanya menghapus opsi dari formulir penelaah. Editor tetap melihat rekomendasi ini pada telaah terdahulu yang memakainya."

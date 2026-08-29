@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ka\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "რეცენზენტთა რეკომენდაციების მმართველი"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "რეცენზენტის მიერ რეცენზიის დასრულებისას არჩეული რეკომენდაციების გადარქმევა (მრავალენოვნად), თანმიმდევრობის შეცვლა და გამორთვა — OJS-ის ბირთვის შეცვლის გარეშე და წინა რეცენზიების ისტორიის შენარჩუნებით."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "დააკონფიგურირეთ რეცენზენტებისთვის ნაჩვენები რეკომენდაციების სია. ცვლილებები ეხება ამ ჟურნალს და რჩება მრავალენოვანი. დატოვეთ იარლიყი ცარიელი რომელიმე ენაზე, რომ OJS-ის ნაგულისხმევი ტექსტი შენარჩუნდეს."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "სიფრთხილე იარლიყების გადარქმევისას"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "იარლიყის გადარქმევა უკუძალის მქონეა: უკვე გაგზავნილი რეცენზიები მთელ პლატფორმაზე ახალი ტექსტით გამოჩნდება (რეცენზენტი, რედაქტორი, ავტორი, წერილები და API). თუ ცვლილება პასუხის მნიშვნელობას ცვლის, სჯობს ძველი ვარიანტი გამორთოთ და ახალი მნიშვნელობისთვის 0 რეცენზიის მქონე ვარიანტი გამოიყენოთ — ასე ჩანაწერი არ გაყალბდება."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "OJS-ის საწყისი რეკომენდაცია"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "ნაჩვენები იარლიყი"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "გადაათრიეთ ელემენტები ⠿ სახელურით, რომ განსაზღვროთ მათი თანმიმდევრობა რეცენზენტის ფორმაში."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "ხელმისაწვდომია რეცენზენტის ფორმაში"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} რეცენზია უკვე იყენებს ამ ვარიანტს — გადარქმევა შეცვლის მათ ჩვენებას."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "ამ ვარიანტს არცერთი რეცენზია არ იყენებს — უსაფრთხოდ შეიძლება ხელახლა განისაზღვროს."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "გამორთვა ვარიანტს მხოლოდ რეცენზენტის ფორმიდან შლის. რედაქტორები ამ რეკომენდაციას კვლავ დაინახავენ იმ წინა რეცენზიებში, სადაც ის გამოიყენეს."

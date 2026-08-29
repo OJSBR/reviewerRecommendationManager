@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ro\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Manager de recomandări ale recenzenților"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Redenumire (multilingvă), reordonare și dezactivare a recomandărilor pe care un recenzent le alege la finalizarea unei recenzii, fără a modifica nucleul OJS și păstrând istoricul recenziilor anterioare."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configurați lista de recomandări afișată recenzenților. Modificările se aplică acestei reviste și rămân multilingve. Lăsați eticheta necompletată într-o limbă pentru a păstra textul implicit OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Atenție la redenumirea etichetelor"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Redenumirea unei etichete este retroactivă: recenziile deja trimise vor fi afișate cu noul text în toată platforma (recenzent, editor, autor, e-mailuri și API). Dacă modificarea schimbă SENSUL răspunsului, mai bine dezactivați opțiunea veche și folosiți pentru noul sens o opțiune cu 0 recenzii — astfel nu falsificați înregistrarea."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Recomandarea originală OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Etichetă afișată"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Trageți elementele de mânerul ⠿ pentru a stabili ordinea în care apar în formularul de recenzie."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Disponibil în formularul de recenzie"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} recenzii folosesc deja această opțiune — redenumirea schimbă modul în care sunt afișate."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Nicio recenzie nu folosește această opțiune — poate fi redefinită în siguranță."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Dezactivarea elimină opțiunea doar din formularul de recenzie. Editorii văd în continuare această recomandare la recenziile anterioare care au folosit-o."

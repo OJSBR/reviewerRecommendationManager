@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: el\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Διαχείριση συστάσεων αξιολογητών"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Μετονομασία (πολύγλωσση), αναδιάταξη και απενεργοποίηση των συστάσεων που επιλέγει ο αξιολογητής κατά την ολοκλήρωση μιας αξιολόγησης, χωρίς αλλαγή στον πυρήνα του OJS και με διατήρηση του ιστορικού των προηγούμενων αξιολογήσεων."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Ρυθμίστε τη λίστα συστάσεων που εμφανίζεται στους αξιολογητές. Οι αλλαγές ισχύουν για αυτό το περιοδικό και παραμένουν πολύγλωσσες. Αφήστε την ετικέτα κενή σε μια γλώσσα για να διατηρηθεί το προεπιλεγμένο κείμενο του OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Προσοχή κατά τη μετονομασία των ετικετών"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Η μετονομασία μιας ετικέτας είναι αναδρομική: οι ήδη υποβληθείσες αξιολογήσεις θα εμφανίζονται με το νέο κείμενο σε όλη την πλατφόρμα (αξιολογητής, επιμελητής, συγγραφέας, μηνύματα και API). Αν η αλλαγή μεταβάλλει το ΝΟΗΜΑ της απάντησης, προτιμήστε να απενεργοποιήσετε την παλιά επιλογή και να χρησιμοποιήσετε για το νέο νόημα μια επιλογή με 0 αξιολογήσεις — έτσι δεν αλλοιώνεται το αρχείο."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Αρχική σύσταση του OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Εμφανιζόμενη ετικέτα"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Σύρετε τα στοιχεία από τη λαβή ⠿ για να ορίσετε τη σειρά με την οποία εμφανίζονται στη φόρμα αξιολόγησης."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Διαθέσιμο στη φόρμα αξιολόγησης"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} αξιολογήσεις χρησιμοποιούν ήδη αυτή την επιλογή — η μετονομασία αλλάζει τον τρόπο εμφάνισής τους."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Καμία αξιολόγηση δεν χρησιμοποιεί αυτή την επιλογή — μπορεί να επαναπροσδιοριστεί με ασφάλεια."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Η απενεργοποίηση αφαιρεί την επιλογή μόνο από τη φόρμα αξιολόγησης. Οι επιμελητές εξακολουθούν να βλέπουν αυτή τη σύσταση σε παλαιότερες αξιολογήσεις που τη χρησιμοποίησαν."

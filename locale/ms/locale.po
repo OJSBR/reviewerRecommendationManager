@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ms\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Pengurus Cadangan Penilai"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Menamakan semula (berbilang bahasa), menyusun semula dan menyahdayakan cadangan yang dipilih penilai semasa menyiapkan penilaian, tanpa mengubah teras OJS dan mengekalkan sejarah penilaian lalu."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Konfigurasikan senarai cadangan yang dipaparkan kepada penilai. Perubahan terpakai untuk jurnal ini dan kekal berbilang bahasa. Biarkan label kosong dalam sesuatu bahasa untuk mengekalkan teks lalai OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Berhati-hati semasa menamakan semula label"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Menamakan semula label bersifat retroaktif: penilaian yang telah dihantar akan dipaparkan dengan teks baharu di seluruh platform (penilai, editor, penulis, e-mel dan API). Jika perubahan mengubah MAKNA jawapan, lebih baik nyahdayakan pilihan lama dan gunakan pilihan dengan 0 penilaian untuk makna baharu — ini mengelakkan rekod dipalsukan."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Cadangan asal OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Label dipaparkan"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Seret item pada pemegang ⠿ untuk menetapkan susunan paparannya dalam borang penilai."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Tersedia dalam borang penilai"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} penilaian sudah menggunakan pilihan ini — menamakannya semula mengubah cara ia dipaparkan."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Tiada penilaian menggunakan pilihan ini — selamat untuk ditakrifkan semula."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Menyahdayakan hanya membuang pilihan itu daripada borang penilai. Editor masih melihat cadangan ini pada penilaian lalu yang menggunakannya."

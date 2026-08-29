@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: hy\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Գրախոսների հանձնարարականների կառավարիչ"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Վերանվանել (բազմալեզու), վերադասավորել և անջատել այն հանձնարարականները, որոնք գրախոսն ընտրում է գրախոսությունն ավարտելիս՝ առանց OJS-ի միջուկը փոխելու և պահպանելով նախորդ գրախոսությունների պատմությունը։"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Կարգավորեք գրախոսներին ցուցադրվող հանձնարարականների ցանկը։ Փոփոխությունները վերաբերում են այս ամսագրին և մնում են բազմալեզու։ Թողեք պիտակը դատարկ որևէ լեզվում՝ OJS-ի կանխադրված տեքստը պահելու համար։"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Զգուշություն պիտակները վերանվանելիս"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Պիտակի վերանվանումը հետադարձ ուժ ունի. արդեն ներկայացված գրախոսությունները ամբողջ հարթակում կցուցադրվեն նոր տեքստով (գրախոս, խմբագիր, հեղինակ, նամակներ և API)։ Եթե փոփոխությունը փոխում է պատասխանի ԻՄԱՍՏԸ, ավելի լավ է անջատել հին տարբերակը և նոր իմաստի համար օգտագործել 0 գրախոսություն ունեցող տարբերակը՝ դա թույլ չի տա խեղաթյուրել գրառումը։"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "OJS-ի սկզբնական հանձնարարականը"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Ցուցադրվող պիտակ"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Քաշեք տարրերը ⠿ բռնակից՝ սահմանելու համար դրանց հերթականությունը գրախոսի ձևում։"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Հասանելի է գրախոսի ձևում"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} գրախոսություն արդեն օգտագործում է այս տարբերակը — վերանվանումը փոխում է դրանց ցուցադրումը։"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Ոչ մի գրախոսություն չի օգտագործում այս տարբերակը — այն կարելի է ապահով վերասահմանել։"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Անջատումը հեռացնում է տարբերակը միայն գրախոսի ձևից։ Խմբագիրները շարունակում են տեսնել այս հանձնարարականը այն նախորդ գրախոսություններում, որտեղ այն օգտագործվել է։"

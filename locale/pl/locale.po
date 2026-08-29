@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: pl\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Menedżer rekomendacji recenzentów"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Zmiana nazw (wielojęzyczna), kolejności i wyłączanie rekomendacji, które recenzent wybiera przy kończeniu recenzji — bez zmian w rdzeniu OJS i z zachowaniem historii wcześniejszych recenzji."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Skonfiguruj listę rekomendacji pokazywaną recenzentom. Zmiany dotyczą tego czasopisma i pozostają wielojęzyczne. Pozostaw etykietę pustą w danym języku, aby zachować domyślny tekst OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Ostrożnie ze zmianą nazw etykiet"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Zmiana nazwy etykiety działa wstecz: już przesłane recenzje będą wyświetlane z nowym tekstem w całej platformie (recenzent, redaktor, autor, e-maile i API). Jeśli zmiana zmienia ZNACZENIE odpowiedzi, lepiej wyłącz starą opcję, a dla nowego znaczenia wykorzystaj opcję z 0 recenzji — dzięki temu nie fałszujesz zapisu."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Pierwotna rekomendacja OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Wyświetlana etykieta"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Przeciągaj pozycje za uchwyt ⠿, aby ustalić kolejność ich wyświetlania w formularzu recenzji."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Dostępne w formularzu recenzji"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} recenzji już korzysta z tej opcji — zmiana nazwy zmienia sposób ich wyświetlania."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Żadna recenzja nie korzysta z tej opcji — można ją bezpiecznie przedefiniować."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Wyłączenie usuwa opcję tylko z formularza recenzji. Redaktorzy nadal widzą tę rekomendację przy wcześniejszych recenzjach, które z niej korzystały."

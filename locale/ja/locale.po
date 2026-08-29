@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ja\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "査読推奨意見マネージャー"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "査読者が査読完了時に選ぶ推奨意見を、多言語で名称変更・並べ替え・無効化できます。OJS 本体を変更せず、過去の査読の履歴も保持します。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "査読者に表示される推奨意見の一覧を設定します。変更はこのジャーナルに適用され、多言語のままです。ある言語でラベルを空にすると、OJS の既定の文言が使われます。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "ラベル名の変更にご注意ください"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "ラベル名の変更はさかのぼって効きます。すでに提出された査読も、プラットフォーム全体（査読者・編集者・著者・メール・API）で新しい文言で表示されます。回答の「意味」が変わる変更なら、古い選択肢を無効にし、査読数 0 の選択肢を新しい意味に割り当ててください。記録の改ざんを避けられます。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "OJS の既定の推奨"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "表示ラベル"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "⠿ のハンドルをドラッグして、査読フォームでの表示順を設定します。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "査読フォームで利用可能"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} 件の査読がこの選択肢を使用しています — 名称を変えると表示も変わります。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "この選択肢を使っている査読はありません — 安全に定義し直せます。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "無効にしても、選択肢が消えるのは査読フォームだけです。編集者は、その選択肢を使った過去の査読では引き続きこの推奨意見を見ることができます。"

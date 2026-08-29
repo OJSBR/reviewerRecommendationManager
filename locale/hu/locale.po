@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: hu\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Bírálói ajánlások kezelője"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "A bíráló által a bírálat lezárásakor választható ajánlások átnevezése (többnyelvűen), sorrendjük módosítása és letiltása – az OJS magjának módosítása nélkül, a korábbi bírálatok előzményeinek megőrzésével."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Állítsa be a bírálóknak megjelenő ajánlások listáját. A változások erre a folyóiratra vonatkoznak, és többnyelvűek maradnak. Hagyja üresen a címkét egy nyelven, ha meg szeretné tartani az OJS alapértelmezett szövegét."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Legyen óvatos a címkék átnevezésekor"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "A címke átnevezése visszamenőleges: a már beküldött bírálatok az új szöveggel jelennek meg az egész platformon (bíráló, szerkesztő, szerző, e-mailek és API). Ha a változtatás megváltoztatja a válasz JELENTÉSÉT, inkább tiltsa le a régi lehetőséget, és az új jelentéshez használjon 0 bírálattal rendelkező lehetőséget – így nem hamisítja meg a nyilvántartást."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Eredeti OJS-ajánlás"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Megjelenített címke"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Húzza az elemeket a ⠿ fogantyúnál fogva, hogy beállítsa a bírálói űrlapon megjelenő sorrendjüket."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Elérhető a bírálói űrlapon"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "Már {$usage} bírálat használja ezt a lehetőséget – az átnevezés megváltoztatja a megjelenésüket."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Egyetlen bírálat sem használja ezt a lehetőséget – biztonságosan újradefiniálható."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "A kikapcsolás csak a bírálói űrlapról távolítja el a lehetőséget. A szerkesztők továbbra is látják ezt az ajánlást azoknál a korábbi bírálatoknál, amelyek használták."

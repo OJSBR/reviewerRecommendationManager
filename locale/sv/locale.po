@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: sv\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Hantering av granskarrekommendationer"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Byt namn på (flerspråkigt), ändra ordning på och inaktivera de rekommendationer som en granskare väljer när granskningen slutförs – utan att ändra OJS-kärnan och med historiken för tidigare granskningar bevarad."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Konfigurera listan över rekommendationer som visas för granskarna. Ändringarna gäller den här tidskriften och förblir flerspråkiga. Lämna etiketten tom på ett språk för att behålla OJS standardtext."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Var försiktig när du byter namn på etiketter"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Att byta namn på en etikett gäller retroaktivt: redan inskickade granskningar visas med den nya texten i hela plattformen (granskare, redaktör, författare, e-post och API). Om ändringen förändrar svarets BETYDELSE är det bättre att inaktivera det gamla alternativet och använda ett alternativ med 0 granskningar för den nya betydelsen – då förfalskas inte uppgifterna."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Ursprunglig OJS-rekommendation"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Visad etikett"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Dra objekten i handtaget ⠿ för att bestämma ordningen de visas i granskningsformuläret."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Tillgängligt i granskningsformuläret"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} granskningar använder redan det här alternativet – ett namnbyte ändrar hur de visas."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Inga granskningar använder det här alternativet – det kan tryggt definieras om."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Att inaktivera tar bort alternativet endast från granskningsformuläret. Redaktörerna ser fortfarande rekommendationen i tidigare granskningar som använde den."
