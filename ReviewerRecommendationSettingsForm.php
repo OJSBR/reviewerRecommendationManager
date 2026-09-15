@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @file ReviewerRecommendationSettingsForm.php
+ * @file plugins/generic/reviewerRecommendationManager/ReviewerRecommendationSettingsForm.php
  *
- * Plugin autoral OJSBR.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerRecommendationSettingsForm
@@ -118,7 +118,7 @@ class ReviewerRecommendationSettingsForm extends Form
     {
         foreach ($this->codes() as $code) {
             $labels = $this->getData("label_{$code}");
-            $labels = is_array($labels) ? array_map(fn ($v) => trim((string) $v), $labels) : [];
+            $labels = is_array($labels) ? array_map(fn ($v) => ReviewerRecommendationManagerPlugin::sanitizeLabel(is_string($v) ? $v : ''), $labels) : [];
             $labels = array_filter($labels, fn ($v) => $v !== '');
 
             $this->plugin->updateSetting($this->contextId, "label_{$code}", $labels, 'object');
