@@ -9,30 +9,42 @@
  * @class PluginTest
  *
  * @brief The plugin classes compiled against the PKP classes of the
- *        installation, and the rules the settings rest on.
+ *        installation: an override whose return type differs from its parent is
+ *        a fatal error that php -l does not catch.
  */
 
 namespace APP\plugins\generic\reviewerRecommendationManager\tests;
 
-use APP\plugins\generic\reviewerRecommendationManager\ReviewerRecommendationManagerPlugin;
-use APP\plugins\generic\reviewerRecommendationManager\ReviewerRecommendationSettingsForm;
-use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\tests\PKPTestCase;
 use ReflectionClass;
 use ReflectionNamedType;
 
-class PluginTest extends TestCase
+class PluginTest extends PKPTestCase
 {
-    public function testOverriddenMethodsDeclareTheReturnTypesOfThisPkpVersion(): void
+    /** @return string[] */
+    protected function classes(): array
     {
-        // A missing or different return type on an override is a fatal error
-        // that php -l does not catch: it only shows next to the parent class.
-        $this->assertTrue(is_subclass_of(ReviewerRecommendationManagerPlugin::class, \PKP\plugins\GenericPlugin::class));
-        $this->assertTrue(is_subclass_of(ReviewerRecommendationSettingsForm::class, \PKP\form\Form::class));
-        foreach ([ReviewerRecommendationManagerPlugin::class, ReviewerRecommendationSettingsForm::class] as $class) {
+        return [
+            \APP\plugins\generic\reviewerRecommendationManager\ReviewerRecommendationManagerPlugin::class,
+            \APP\plugins\generic\reviewerRecommendationManager\ReviewerRecommendationSettingsForm::class,
+        ];
+    }
+
+    public function testEveryClassLoadsAgainstThisPkpVersion(): void
+    {
+        foreach ($this->classes() as $class) {
+            $this->assertTrue(class_exists($class), "{$class} does not load.");
+        }
+    }
+
+    public function testOverriddenMethodsDeclareCompatibleReturnTypes(): void
+    {
+        foreach ($this->classes() as $class) {
             $reflection = new ReflectionClass($class);
             $parent = $reflection->getParentClass();
+            $this->assertTrue($parent !== false, "{$class} extends nothing.");
             foreach ($reflection->getMethods() as $method) {
-                if ($method->getDeclaringClass()->getName() !== $class || !$parent->hasMethod($method->getName())) {
+                if ($method->getDeclaringClass()->getName() !== $reflection->getName() || !$parent->hasMethod($method->getName())) {
                     continue;
                 }
                 $parentType = $parent->getMethod($method->getName())->getReturnType();
@@ -40,49 +52,29 @@ class PluginTest extends TestCase
                     continue;
                 }
                 $type = $method->getReturnType();
+                $covariant = $type instanceof ReflectionNamedType && $parentType instanceof ReflectionNamedType
+                    && !$type->isBuiltin() && !$parentType->isBuiltin() && is_a($type->getName(), $parentType->getName(), true);
                 $this->assertTrue(
-                    $type !== null && ((string) $type === (string) $parentType || ($type instanceof ReflectionNamedType && '?' . $type->getName() === (string) $parentType)),
+                    $type !== null && ((string) $type === (string) $parentType || $covariant || ($type instanceof ReflectionNamedType && '?' . $type->getName() === (string) $parentType)),
                     sprintf('%s::%s() must declare a return type compatible with %s.', $reflection->getShortName(), $method->getName(), $parentType)
                 );
             }
         }
     }
 
-    public function testTheSixCoreRecommendationsAreManaged(): void
+    public function testNoInheritedPropertyIsRedeclaredWithAType(): void
     {
-        $map = ReviewerRecommendationManagerPlugin::getRecommendationKeyMap();
-
-        $this->assertCount(6, $map);
-        $this->assertFalse(array_key_exists('', $map), 'The "Choose One" entry is not a recommendation.');
-        $this->assertSame(ReviewAssignment::getReviewerRecommendationOptions()[ReviewAssignment::SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT], $map[ReviewAssignment::SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT]);
-        foreach ($map as $code => $key) {
-            $this->assertTrue(is_int($code) && $code > 0, 'Unexpected recommendation code ' . var_export($code, true));
-            $this->assertSame(1, preg_match('/^[a-z.]+$/i', $key), "Unexpected locale key {$key}.");
+        // A typed redeclaration of an untyped parent property ($pluginPath...) is fatal.
+        $this->assertNotEmpty($this->classes());
+        foreach ($this->classes() as $class) {
+            $reflection = new ReflectionClass($class);
+            $parent = $reflection->getParentClass();
+            foreach ($reflection->getProperties() as $property) {
+                if ($property->getDeclaringClass()->getName() !== $reflection->getName() || !$parent->hasProperty($property->getName())) {
+                    continue;
+                }
+                $this->assertSame((string) $parent->getProperty($property->getName())->getType(), (string) $property->getType(), "{$class}::\${$property->getName()}");
+            }
         }
-    }
-
-    public function testLabelsAreStrippedOfMarkupAndVueDelimiters(): void
-    {
-        $this->assertSame('Accept as is', ReviewerRecommendationManagerPlugin::sanitizeLabel('  Accept   as is '));
-        $this->assertSame('Accept', ReviewerRecommendationManagerPlugin::sanitizeLabel('<b>Accept</b><script>alert(1)</script>'));
-        $this->assertSame('Accept', ReviewerRecommendationManagerPlugin::sanitizeLabel('&lt;img src=x onerror=alert(1)&gt;Accept'));
-        $this->assertSame('Accept { {7*7} }', ReviewerRecommendationManagerPlugin::sanitizeLabel('Accept {{7*7}}'));
-        $this->assertSame('Aceitar com revisões & ajustes', ReviewerRecommendationManagerPlugin::sanitizeLabel('Aceitar com revisões &amp; ajustes'));
-        $this->assertSame('', ReviewerRecommendationManagerPlugin::sanitizeLabel(null));
-    }
-
-    public function testTheFormSavesSanitizedLabels(): void
-    {
-        $source = (string) file_get_contents(dirname(__DIR__) . '/ReviewerRecommendationSettingsForm.php');
-        $this->assertStringContainsString('ReviewerRecommendationManagerPlugin::sanitizeLabel(', $source);
-        $this->assertStringContainsString("updateSetting(\$this->contextId, \"label_{\$code}\", \$labels, 'object')", $source);
-    }
-
-    public function testOnlyTheReviewerFormIsFiltered(): void
-    {
-        $this->assertSame('reviewer/review/step3.tpl', ReviewerRecommendationManagerPlugin::REVIEWER_STEP3_TEMPLATE);
-        $source = (string) file_get_contents(dirname(__DIR__) . '/ReviewerRecommendationManagerPlugin.php');
-        $this->assertStringNotContainsString('TemplateResource::getFilename', $source, 'No core template may be replaced.');
-        $this->assertStringNotContainsString('clearTemplateCache', $source);
     }
 }

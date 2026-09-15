@@ -1,10 +1,10 @@
 # Reviewer Recommendation Manager — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.4.0-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.4.1-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.4.0/reviewerRecommendationManager-1.0.4.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.4.0-ojs3.4/reviewerRecommendationManager-1.0.4.0-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.4.1/reviewerRecommendationManager-1.0.4.1.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.4.1-ojs3.4/reviewerRecommendationManager-1.0.4.1-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
 
 > **This is the `stable-3_4_0` branch (OJS 3.4).** For OJS 3.5 use the
 > [`stable-3_5_0`](../../tree/stable-3_5_0) branch.
@@ -21,8 +21,8 @@ OJS core** and **preserving the historical record** of reviews already submitted
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.4.0 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.4.0 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.4.1 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.4.1 |
 
 > **OJS 3.6 note.** PKP has implemented customizable reviewer recommendations in the core
 > for OJS 3.6 ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)). This plugin
@@ -90,35 +90,35 @@ when renaming affects existing reviews.
 
 ## Tests
 
-- **PHP suite** (`tests/`, 19 tests): the plugin classes against the installed PKP (return
-  types of the overridden methods), the six core recommendations, label sanitization (markup,
-  entities, Vue delimiters), the settings template (CSRF, escaping, no hard-coded text) and the
-  38 translations (identical keys, placeholders, fuzzy markers). Run either way from the OJS
-  root:
+- **PHPUnit** (`tests/*Test.php`, on PKP's `PKPTestCase`): the plugin classes against the installed
+  PKP, stored labels without markup or Vue delimiters, the reviewer form filtered (disabled options
+  dropped, configured order, only on the reviewer step), no settings action at site level, the
+  usage count, a settings template that only initialises the form, and the translations. From the
+  OJS root:
 
   ```bash
-  php plugins/generic/reviewerRecommendationManager/tests/run.php
   lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/reviewerRecommendationManager/tests"
   ```
 
-- **Cypress** (`cypress/tests/functional/ReviewerRecommendationManager.cy.js`): the settings
-  (six recommendations, a renamed label saved without markup, a disabled option) and the list
-  a reviewer actually receives at step 3. Every setting touched is restored at the end.
-  Captcha on login must be off for the run.
+- **Cypress** (`cypress/tests/functional/ReviewerRecommendationManager.cy.js`, run by
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push): enables the
+  plugin, lists the six recommendations with the core wording, saves a renamed and a disabled one
+  (markup and Vue delimiters removed) and puts the settings back. With `reviewerUser`,
+  `reviewerPassword` and `reviewSubmissionId` it also checks the list a reviewer receives.
+- Verified on OJS 3.5.0.3 and 3.4.0.10.
 
-  ```bash
-  npx cypress run --config specPattern='plugins/generic/reviewerRecommendationManager/cypress/tests/functional/*.cy.js' \
-    --env contextPath=<journal>,formLocale=<locale>,adminUser=<user>,adminPassword=<password>,reviewerUser=<user>,reviewerPassword=<password>,reviewSubmissionId=<id>
-  ```
-
-- Verified on OJS 3.5.0.3 and 3.4.0.10: a renamed label resolved by the core translation, the
-  reviewer list reordered with the disabled option gone, other templates untouched, and the
-  Cypress spec green on both.
+Tests are kept in the repository and are not part of the release package.
 
 ## Credits & authorship
 
 - **Developed and maintained by** [OJSBR](https://ojsbr.com) — original plugin.
 - Distributed under the **GNU GPL v3**.
+
+## AI use
+
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
+it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
+for the published releases.
 
 ## Contributing
 
@@ -148,8 +148,8 @@ avaliação (Aceitar, Correções obrigatórias, Submeter novamente, Rejeitar, V
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.4.0 |
-| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.4.0 |
+| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.4.1 |
+| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.4.1 |
 
 As duas branches têm o mesmo código. As pastas de idioma seguem os códigos de cada linha do OJS
 (OJS 3.4: `fr_FR`, `pt_PT`, `nb`, `sr@latin`, `zh_CN`; OJS 3.5: `fr`, `pt`, `nb_NO`, `sr_Latn`,
@@ -196,23 +196,27 @@ selo de impacto avisa quando o renomear afeta pareceres existentes.
 
 ### Testes
 
-Suíte PHP em `tests/` (19 testes, pelo `tests/run.php` ou pelo PHPUnit do PKP) e Cypress em
-`cypress/tests/functional/`, com os comandos da seção em inglês. A suíte cobre as classes do
-plugin contra o PKP instalado, as seis recomendações do núcleo, a limpeza dos rótulos (marcação,
-entidades, delimitadores do Vue), o template e as 38 traduções; o Cypress cobre as configurações
-e a lista que o avaliador recebe no passo 3, restaurando tudo no fim.
-
-Os rótulos são texto puro: viram traduções de chaves do núcleo que o núcleo imprime sem escapar,
-então a marcação é removida ao salvar e os delimitadores `{{ }}` do Vue são separados.
-
-Verificado no OJS 3.5.0.3 e 3.4.0.10: rótulo renomeado resolvido pela tradução do núcleo, lista
-do avaliador reordenada e sem a opção desativada, demais templates intactos e o Cypress verde nas
-duas versões.
+PHPUnit em `tests/*Test.php`, sobre o `PKPTestCase` do PKP: classes do plugin contra o PKP instalado,
+rótulos gravados sem marcação nem delimitadores do Vue, formulário do avaliador filtrado (opções
+desativadas fora, ordem configurada, só no passo do avaliador), nenhuma ação de configuração no
+nível do site, contagem de uso, template de configuração que só inicializa o formulário e as
+traduções. Cypress em `cypress/tests/functional/`, rodado pelo
+[pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push: liga o plugin, lista as
+seis recomendações com o texto do núcleo, salva uma renomeada e uma desativada (sem marcação) e
+devolve a configuração; com `reviewerUser`, `reviewerPassword` e `reviewSubmissionId` confere também
+a lista que o avaliador recebe. Verificado no OJS 3.5.0.3 e 3.4.0.10. Os testes ficam no repositório
+e não vão no pacote de release.
 
 ### Créditos e autoria
 
 - **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com) — plugin autoral.
 - Distribuído sob a **GNU GPL v3**.
+
+### Uso de IA
+
+Foi usada IA generativa (Claude, da Anthropic) para escrever e rodar testes, melhorar o código e
+alinhá-lo aos padrões da PKP. Toda mudança é revisada e testada pela OJSBR, que responde pelas
+releases publicadas.
 
 ### Licença
 

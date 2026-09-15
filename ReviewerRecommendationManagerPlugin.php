@@ -19,6 +19,7 @@ use APP\notification\NotificationManager;
 use Gettext\Generator\PoGenerator;
 use Gettext\Translation;
 use Gettext\Translations;
+use Illuminate\Support\Facades\DB;
 use PKP\core\JSONMessage;
 use PKP\facades\Locale;
 use PKP\file\ContextFileManager;
@@ -37,7 +38,10 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     public const REVIEWER_STEP3_TEMPLATE = 'reviewer/review/step3.tpl';
 
     /**
-     * @copydoc Plugin::register()
+     * Register the label overrides and the hooks that adjust the reviewer form.
+     *
+     * The plugin only acts on web pages of a journal, so the hooks are added
+     * only when it is enabled there.
      *
      * @param null|mixed $mainContextId
      */
@@ -54,7 +58,10 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
         $this->registerLabelOverrides();
 
         // 2) Reorder / disable: adjust the list in the reviewer form only.
-        Hook::add('TemplateManager::fetch', [$this, 'filterReviewerForm']);
+        Hook::add('TemplateManager::fetch', $this->filterReviewerForm(...));
+
+        // 3) The script of the settings form, on the page that opens it.
+        Hook::add('TemplateManager::display', $this->addSettingsScript(...));
 
         return true;
     }
@@ -124,6 +131,27 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
         }
 
         $templateMgr->assign('reviewerRecommendationOptions', $result);
+        return Hook::CONTINUE;
+    }
+
+    /**
+     * TemplateManager::display hook: queues the script of the settings form on
+     * the website settings page, where the plugins list opens it.
+     */
+    public function addSettingsScript(string $hookName, array $args): bool
+    {
+        $templateMgr = $args[0];
+        if ($args[1] !== 'management/website.tpl') {
+            return Hook::CONTINUE;
+        }
+
+        $request = Application::get()->getRequest();
+        $templateMgr->addJavaScript(
+            'reviewerRecommendationManagerSettings',
+            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/settingsForm.js',
+            ['contexts' => 'backend']
+        );
+
         return Hook::CONTINUE;
     }
 
@@ -274,13 +302,15 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
      */
     public static function getUsageCounts(int $contextId): array
     {
-        $rows = \Illuminate\Support\Facades\DB::table('review_assignments AS ra')
+        // OJS 3.4 has no review assignment repository.
+        $rows = DB::table('review_assignments AS ra')
             ->join('submissions AS s', 's.submission_id', '=', 'ra.submission_id')
             ->where('s.context_id', $contextId)
             ->whereNotNull('ra.recommendation')
             ->where('ra.recommendation', '!=', 0)
             ->groupBy('ra.recommendation')
-            ->select('ra.recommendation', \Illuminate\Support\Facades\DB::raw('COUNT(*) AS cnt'))
+            ->select('ra.recommendation')
+            ->selectRaw('COUNT(*) AS cnt')
             ->get();
 
         $counts = [];
@@ -291,7 +321,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * @copydoc Plugin::getContextSpecificPluginSettingsFile()
+     * Default settings installed for each new journal.
      */
     public function getContextSpecificPluginSettingsFile(): string
     {
@@ -299,12 +329,12 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * @copydoc Plugin::getActions()
+     * Add the settings action to the plugin entry in the plugins list.
      */
     public function getActions($request, $verb): array
     {
         $actions = parent::getActions($request, $verb);
-        if (!$this->getEnabled()) {
+        if (!$request->getContext() || !$this->getEnabled()) {
             return $actions;
         }
         $router = $request->getRouter();
@@ -314,7 +344,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * @copydoc Plugin::manage()
+     * Show and save the settings form of the journal.
      */
     public function manage($args, $request): JSONMessage
     {
@@ -340,7 +370,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * @copydoc Plugin::getDisplayName()
+     * Name shown in the plugins list.
      */
     public function getDisplayName(): string
     {
@@ -348,7 +378,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * @copydoc Plugin::getDescription()
+     * Description shown in the plugins list.
      */
     public function getDescription(): string
     {

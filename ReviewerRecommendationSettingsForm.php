@@ -47,7 +47,7 @@ class ReviewerRecommendationSettingsForm extends Form
     }
 
     /**
-     * @copydoc Form::initData()
+     * Load the labels, states and order stored for the journal.
      */
     public function initData(): void
     {
@@ -60,7 +60,7 @@ class ReviewerRecommendationSettingsForm extends Form
     }
 
     /**
-     * @copydoc Form::readInputData()
+     * Read the labels, states and order sent by the form.
      */
     public function readInputData(): void
     {
@@ -75,7 +75,7 @@ class ReviewerRecommendationSettingsForm extends Form
     }
 
     /**
-     * @copydoc Form::fetch()
+     * Render the cards in the saved order, with each recommendation's use in past reviews.
      *
      * @param null|mixed $template
      */
@@ -106,13 +106,14 @@ class ReviewerRecommendationSettingsForm extends Form
 
         $templateMgr->assign([
             'pluginName' => $this->plugin->getName(),
+            'rrmStyleUrl' => $request->getBaseUrl() . '/' . $this->plugin->getPluginPath() . '/css/settingsForm.css',
             'recommendations' => $recommendations,
         ]);
         return parent::fetch($request, $template, $display);
     }
 
     /**
-     * @copydoc Form::execute()
+     * Store the settings and regenerate the label overrides.
      */
     public function execute(...$functionArgs)
     {
