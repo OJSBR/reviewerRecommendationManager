@@ -35,7 +35,8 @@ describe('Reviewer Recommendation Manager plugin', function() {
 	const pageUrl = (path) => '/index.php/' + contextPath + (path ? '/' + path : '');
 
 	// Same as PKP's cy.waitJQuery(), which the support files of OJS 3.3 test sites may lack.
-	const waitJQuery = () => cy.window().its('jQuery.active').should('eq', 0);
+	// The Plugins tab can keep requests open for a while (the plugin gallery), hence the timeout.
+	const waitJQuery = () => cy.window().its('jQuery.active', {timeout: 60000}).should('eq', 0);
 
 	// Requests carry the browser's User-Agent: OJS 3.3 drops a session whose agent changes.
 	const request = (options) => cy.window({log: false}).then((win) => cy.request(Object.assign(
@@ -116,13 +117,11 @@ describe('Reviewer Recommendation Manager plugin', function() {
 
 	const openSettings = () => openPluginSettings('reviewerrecommendationmanagerplugin', settingsForm);
 
-	// The multilingual field keeps its value through clear() on some versions:
-	// empty it explicitly before typing.
+	// The value is set on the field instead of typed: on OJS 3.4 the fields of the other
+	// languages live in a popover that is hidden until the main one gets the focus, and
+	// what is under test is what the server keeps, not the keyboard.
 	const setLabel = (code, text) => {
-		cy.get(label(code)).invoke('val', '').trigger('input');
-		if (text) {
-			cy.get(label(code)).type(text, {delay: 0, parseSpecialCharSequences: false});
-		}
+		cy.get(label(code)).should('have.length', 1).invoke('val', text || '').trigger('input', {force: true}).trigger('change', {force: true});
 		cy.get(label(code)).should('have.value', text || '');
 	};
 
