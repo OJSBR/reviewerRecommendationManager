@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file ReviewerRecommendationManagerPlugin.php
+ * @file plugins/generic/reviewerRecommendationManager/ReviewerRecommendationManagerPlugin.php
  *
  * Copyright (c) 2026 OJSBR (https://ojsbr.com)
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
@@ -165,6 +165,21 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
+     * A label as it may be stored. The labels become translations of core keys
+     * that the core prints without escaping (the reviewer grid builds its cell
+     * HTML with them) and that also reach pages mounted by Vue, so markup is
+     * removed and the Vue delimiters are broken apart.
+     */
+    public static function sanitizeLabel(?string $label): string
+    {
+        $label = html_entity_decode((string) $label, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $label = strip_tags(preg_replace('#<(script|style)\b[^>]*>.*?</\1\s*>#is', '', $label) ?? '');
+        $label = str_replace(['{{', '}}'], ['{ {', '} }'], $label);
+
+        return trim(preg_replace('/\s+/u', ' ', $label) ?? '');
+    }
+
+    /**
      * Custom labels for a code (locale => text array), or [] when not configured.
      */
     public function getCustomLabels(int $contextId, int $code): array
@@ -255,7 +270,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     /**
      * Count of historical reviews per recommendation in this context (impact warning).
      *
-     * @return array<int, int> código => número de pareceres já emitidos
+     * @return array<int, int> recommendation code => number of reviews that used it
      */
     public static function getUsageCounts(int $contextId): array
     {
@@ -303,7 +318,7 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
      */
     public function manage($args, $request): JSONMessage
     {
-        if ($request->getUserVar('verb') !== 'settings') {
+        if ($request->getUserVar('verb') !== 'settings' || !$request->getContext()) {
             return parent::manage($args, $request);
         }
 

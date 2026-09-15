@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: nl\n"
+
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Beheer van beoordelaarsaanbevelingen"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Hernoem (meertalig), herschik en schakel de aanbevelingen uit die een beoordelaar kiest bij het afronden van een beoordeling, zonder de OJS-kern te wijzigen en met behoud van de geschiedenis van eerdere beoordelingen."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configureer de lijst met aanbevelingen die aan beoordelaars wordt getoond. Wijzigingen gelden voor dit tijdschrift en blijven meertalig. Laat een label in een taal leeg om de standaardtekst van OJS te behouden."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Wees voorzichtig bij het hernoemen van labels"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Een label hernoemen werkt met terugwerkende kracht: al ingediende beoordelingen worden in het hele platform met de nieuwe tekst weergegeven (beoordelaar, redacteur, auteur, e-mails en API). Verandert de wijziging de BETEKENIS van het antwoord, schakel dan liever de oude optie uit en gebruik voor de nieuwe betekenis een optie met 0 beoordelingen — zo vervalst u het register niet."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Oorspronkelijke OJS-aanbeveling"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Weergegeven label"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Sleep items met de greep ⠿ om de volgorde te bepalen waarin ze in het beoordelingsformulier verschijnen."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Beschikbaar in het beoordelingsformulier"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} beoordelingen gebruiken deze optie al — hernoemen verandert hoe ze worden weergegeven."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Geen enkele beoordeling gebruikt deze optie — die kan veilig opnieuw worden gedefinieerd."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Uitschakelen verwijdert de optie alleen uit het beoordelingsformulier. Redacteuren blijven deze aanbeveling zien bij eerdere beoordelingen die haar gebruikten."

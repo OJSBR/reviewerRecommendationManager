@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: tr\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Hakem Öneri Yöneticisi"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Hakemin değerlendirmeyi tamamlarken seçtiği önerileri yeniden adlandırın (çok dilli), sıralayın ve devre dışı bırakın; OJS çekirdeği değişmez ve geçmiş değerlendirmelerin geçmişi korunur."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Hakemlere gösterilen öneri listesini yapılandırın. Değişiklikler bu dergi için geçerlidir ve çok dilli kalır. OJS'nin varsayılan metnini korumak için bir dilde etiketi boş bırakın."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Etiketleri yeniden adlandırırken dikkat"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Bir etiketi yeniden adlandırmak geriye dönük etkilidir: gönderilmiş değerlendirmeler platformun tamamında yeni metinle görünür (hakem, editör, yazar, e-postalar ve API). Değişiklik yanıtın ANLAMINI değiştiriyorsa, eski seçeneği devre dışı bırakıp yeni anlam için 0 değerlendirmesi olan bir seçeneği kullanmak daha iyidir — böylece kayıt çarpıtılmaz."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Özgün OJS önerisi"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Görüntülenen etiket"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Öğeleri ⠿ tutamacından sürükleyerek hakem formunda görünme sıralarını belirleyin."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Hakem formunda kullanılabilir"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} değerlendirme bu seçeneği zaten kullanıyor — yeniden adlandırmak görünümlerini değiştirir."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Bu seçeneği hiçbir değerlendirme kullanmıyor — güvenle yeniden tanımlanabilir."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Devre dışı bırakmak seçeneği yalnızca hakem formundan kaldırır. Editörler bu öneriyi, onu kullanmış geçmiş değerlendirmelerde görmeye devam eder."

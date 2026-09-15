@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: gl\n"
+
+
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Xestor de recomendacións de revisión"
+
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Renomear (de xeito multilingüe), reordenar e desactivar as recomendacións que unha persoa revisora escolle ao completar unha revisión, sen modificar o núcleo de OJS e preservando o historial das revisións anteriores."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Configure a lista de recomendacións que se amosa ás persoas revisoras. Os cambios aplícanse a esta revista e seguen a ser multilingües. Deixe a etiqueta baleira nunha lingua para manter o texto predeterminado de OJS."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Coidado ao renomear as etiquetas"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Renomear unha etiqueta é retroactivo: as revisións xa enviadas amosaranse co novo texto en toda a plataforma (revisión, edición, autoría, correos e API). Se o cambio altera o SIGNIFICADO da resposta, é mellor desactivar a opción antiga e reutilizar unha opción con 0 revisións para o novo significado — así non se falsea o rexistro."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Recomendación orixinal de OJS"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Etiqueta amosada"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Arrastre os elementos polo tirador ⠿ para definir a orde na que aparecen no formulario de revisión."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Dispoñible no formulario de revisión"
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} revisións xa empregan esta opción — renomeala cambia como se amosan."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Ningunha revisión emprega esta opción — pódese redefinir con seguridade."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Desactivala só quita a opción do formulario de revisión. O persoal editor segue vendo esta recomendación nas revisións anteriores que a empregaron."

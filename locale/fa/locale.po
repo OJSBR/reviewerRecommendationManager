@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fa\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "مدیر توصیه‌های داوران"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "تغییر نام (چندزبانه)، تغییر ترتیب و غیرفعال‌سازی توصیه‌هایی که داور هنگام تکمیل داوری برمی‌گزیند، بدون تغییر هستهٔ OJS و با حفظ سابقهٔ داوری‌های پیشین."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "فهرست توصیه‌هایی را که به داوران نشان داده می‌شود تنظیم کنید. تغییرات برای همین نشریه اعمال می‌شود و چندزبانه می‌ماند. برچسب را در یک زبان خالی بگذارید تا متن پیش‌فرض OJS حفظ شود."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "در تغییر نام برچسب‌ها دقت کنید"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "تغییر نام برچسب اثر بازگشتی دارد: داوری‌های ارسال‌شده در سراسر سامانه با متن جدید نمایش داده می‌شوند (داور، سردبیر، نویسنده، ایمیل‌ها و API). اگر تغییر، معنای پاسخ را دگرگون می‌کند، بهتر است گزینهٔ قدیمی را غیرفعال کنید و برای معنای تازه از گزینه‌ای با ۰ داوری استفاده کنید — این کار از تحریف سوابق جلوگیری می‌کند."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "توصیهٔ اصلی OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "برچسب نمایش‌داده‌شده"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "موارد را از دستگیرهٔ ⠿ بکشید تا ترتیب نمایش آن‌ها در فرم داوری تعیین شود."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "در فرم داوری در دسترس است"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} داوری از این گزینه استفاده کرده‌اند — تغییر نام، نحوهٔ نمایش آن‌ها را عوض می‌کند."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "هیچ داوری‌ای از این گزینه استفاده نمی‌کند — بازتعریف آن بی‌خطر است."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "غیرفعال کردن، گزینه را فقط از فرم داوری حذف می‌کند. سردبیران همچنان این توصیه را در داوری‌های گذشته‌ای که از آن استفاده کرده‌اند می‌بینند."

@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fi\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Arvioijien suositusten hallinta"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Nimeä uudelleen (monikielisesti), järjestä ja poista käytöstä suositukset, jotka arvioija valitsee arviota viimeistellessään — muuttamatta OJS-ydintä ja säilyttäen aiempien arvioiden historian."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Määritä arvioijille näytettävä suositusluettelo. Muutokset koskevat tätä lehteä ja pysyvät monikielisinä. Jätä nimike tyhjäksi jollakin kielellä, jos haluat säilyttää OJS:n oletustekstin."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Ole varovainen nimikkeitä muuttaessasi"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Nimikkeen muuttaminen vaikuttaa takautuvasti: jo lähetetyt arviot näkyvät uudella tekstillä koko alustalla (arvioija, toimittaja, kirjoittaja, sähköpostit ja API). Jos muutos muuttaa vastauksen MERKITYSTÄ, poista vanha vaihtoehto käytöstä ja ota uudelle merkitykselle vaihtoehto, jolla on 0 arviota — näin tietue ei vääristy."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Alkuperäinen OJS-suositus"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Näytettävä nimike"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Vedä kohteita ⠿-kahvasta määrittääksesi, missä järjestyksessä ne näkyvät arvioijan lomakkeella."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Käytettävissä arvioijan lomakkeella"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} arviota käyttää jo tätä vaihtoehtoa — uudelleennimeäminen muuttaa niiden näkymistä."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Yksikään arvio ei käytä tätä vaihtoehtoa — sen voi määritellä turvallisesti uudelleen."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Poistaminen käytöstä poistaa vaihtoehdon vain arvioijan lomakkeelta. Toimittajat näkevät suosituksen edelleen niissä aiemmissa arvioissa, joissa sitä on käytetty."

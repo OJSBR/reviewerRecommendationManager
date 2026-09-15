@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: az\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Rəyçi tövsiyələri meneceri"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Rəyçinin rəyi tamamlayarkən seçdiyi tövsiyələri yenidən adlandırın (çoxdilli), sırasını dəyişin və deaktiv edin — OJS nüvəsini dəyişmədən və keçmiş rəylərin tarixçəsini qoruyaraq."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Rəyçilərə göstərilən tövsiyə siyahısını tənzimləyin. Dəyişikliklər bu jurnala aiddir və çoxdilli qalır. Hər hansı dildə etiketi boş buraxsanız, OJS-in standart mətni saxlanılır."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Etiketləri adlandırarkən diqqətli olun"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Etiketin adının dəyişməsi geriyə şamil olunur: artıq göndərilmiş rəylər bütün platformada yeni mətnlə görünəcək (rəyçi, redaktor, müəllif, e-poçtlar və API). Əgər dəyişiklik cavabın MƏNASINI dəyişirsə, köhnə variantı deaktiv edib yeni məna üçün heç bir rəydə istifadə olunmayan variantı götürmək daha yaxşıdır — bu, qeydlərin təhrif olunmasının qarşısını alır."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Orijinal OJS tövsiyəsi"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Göstərilən etiket"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Elementləri ⠿ tutacağından dartaraq rəyçi formasında görünmə sırasını təyin edin."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Rəyçi formasında mövcuddur"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "Bu variantı artıq {$usage} rəy istifadə edir — adının dəyişməsi onların göstərilməsini dəyişdirir."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Bu variantı heç bir rəy istifadə etmir — təhlükəsiz şəkildə yenidən təyin edilə bilər."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Deaktivləşdirmə variantı yalnız rəyçi formasından silir. Redaktorlar bu tövsiyəni ondan istifadə etmiş keçmiş rəylərdə görməkdə davam edir."

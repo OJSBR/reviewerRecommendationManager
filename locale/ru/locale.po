@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ru\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Менеджер рекомендаций рецензентов"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Переименование (многоязычное), изменение порядка и отключение рекомендаций, которые рецензент выбирает при завершении рецензии, без изменения ядра OJS и с сохранением истории прошлых рецензий."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Настройте список рекомендаций, показываемый рецензентам. Изменения действуют для этого журнала и остаются многоязычными. Оставьте подпись пустой на каком-либо языке, чтобы сохранить стандартный текст OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Осторожно при переименовании подписей"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Переименование подписи действует задним числом: уже отправленные рецензии будут отображаться с новым текстом на всей платформе (рецензент, редактор, автор, письма и API). Если изменение меняет СМЫСЛ ответа, лучше отключить старый вариант и использовать для нового смысла вариант с 0 рецензиями — так запись не будет искажена."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Исходная рекомендация OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Отображаемая подпись"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Перетаскивайте элементы за маркер ⠿, чтобы задать порядок их появления в форме рецензирования."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Доступно в форме рецензирования"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "Этот вариант уже используется в {$usage} рецензиях — переименование изменит их отображение."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Этот вариант не используется ни в одной рецензии — его можно безопасно переопределить."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Отключение убирает вариант только из формы рецензирования. Редакторы по-прежнему видят эту рекомендацию в прошлых рецензиях, где она использовалась."

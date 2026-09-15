@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: eu\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Ebaluatzaileen gomendioen kudeatzailea"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Ebaluatzaileak ebaluazioa amaitzean aukeratzen dituen gomendioak berrizendatu (eleaniztun), berrantolatu eta desgaitu, OJSren nukleoa aldatu gabe eta aurreko ebaluazioen historia mantenduz."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Konfiguratu ebaluatzaileei erakusten zaien gomendio-zerrenda. Aldaketak aldizkari honi aplikatzen zaizkio eta eleaniztunak izaten jarraitzen dute. Utzi etiketa hutsik hizkuntza batean OJSren testu lehenetsia mantentzeko."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Kontuz etiketak berrizendatzean"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Etiketa berrizendatzea atzeraeragina da: dagoeneko bidalitako ebaluazioak testu berriarekin agertuko dira plataforma osoan (ebaluatzailea, editorea, egilea, mezuak eta APIa). Aldaketak erantzunaren ESANAHIA aldatzen badu, hobe da aukera zaharra desgaitzea eta esanahi berrirako 0 ebaluazio dituen aukera bat erabiltzea — horrela erregistroa ez da faltsutzen."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "OJSren jatorrizko gomendioa"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Erakutsitako etiketa"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Arrastatu elementuak ⠿ heldulekutik ebaluazio-inprimakian agertuko diren ordena zehazteko."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Ebaluatzailearen inprimakian erabilgarri"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} ebaluaziok darabilte jada aukera hau — berrizendatzeak nola erakusten diren aldatzen du."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Ebaluazio bakar batek ere ez du aukera hau erabiltzen — lasai birdefini daiteke."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Desgaituz gero, aukera ebaluazio-inprimakitik soilik kentzen da. Editoreek gomendio hori ikusten jarraituko dute erabili zuten aurreko ebaluazioetan."

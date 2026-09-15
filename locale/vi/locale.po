@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: vi\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Trình quản lý khuyến nghị phản biện"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Đổi tên (đa ngữ), sắp xếp lại và tắt các khuyến nghị mà người phản biện chọn khi hoàn tất phản biện, không sửa lõi OJS và vẫn giữ lịch sử các bản phản biện trước."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Cấu hình danh sách khuyến nghị hiển thị cho người phản biện. Thay đổi áp dụng cho tạp chí này và vẫn đa ngữ. Để trống nhãn ở một ngôn ngữ nếu muốn giữ nguyên văn bản mặc định của OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Thận trọng khi đổi tên nhãn"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Đổi tên nhãn có hiệu lực hồi tố: các bản phản biện đã gửi sẽ hiển thị bằng văn bản mới trên toàn hệ thống (người phản biện, biên tập viên, tác giả, thư điện tử và API). Nếu thay đổi làm biến đổi Ý NGHĨA của câu trả lời, nên tắt lựa chọn cũ và dùng một lựa chọn có 0 bản phản biện cho ý nghĩa mới — cách này tránh làm sai lệch hồ sơ."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Khuyến nghị gốc của OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Nhãn hiển thị"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Kéo các mục bằng tay cầm ⠿ để đặt thứ tự hiển thị trong biểu mẫu phản biện."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Có trong biểu mẫu phản biện"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "{$usage} bản phản biện đã dùng lựa chọn này — đổi tên sẽ thay đổi cách chúng hiển thị."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Không có bản phản biện nào dùng lựa chọn này — có thể định nghĩa lại an toàn."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Việc tắt chỉ gỡ lựa chọn khỏi biểu mẫu phản biện. Biên tập viên vẫn thấy khuyến nghị này ở các bản phản biện trước đã dùng nó."

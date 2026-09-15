@@ -1,7 +1,7 @@
 {**
- * templates/settingsForm.tpl
+ * plugins/generic/reviewerRecommendationManager/templates/settingsForm.tpl
  *
- * Plugin autoral OJSBR.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Reviewer recommendation settings (rename / reorder / disable).
@@ -83,7 +83,7 @@
 	.rrmField {ldelim} margin:0 0 1em; {rdelim}
 	.rrmField input[type="text"] {ldelim} width:100%; box-sizing:border-box; {rdelim}
 
-	/* faixa do checkbox, escrita à mão — fica DENTRO do card, sem <li> */
+	/* checkbox strip, written by hand so it stays INSIDE the card, without an <li> */
 	.rrmToggle {ldelim}
 		display:flex; align-items:center; gap:.65em;
 		padding:.75em .9em; background:#f6f8fa; border:1px solid #e1e6eb; border-radius:6px;
@@ -127,7 +127,7 @@
 				<div class="rrmCard" data-code="{$rec.code}">
 
 					<div class="rrmCardHead">
-						<span class="rrmHandle" title="{translate key="plugins.generic.reviewerRecommendationManager.settings.dragHint"}">&#9776;</span>
+						<span class="rrmHandle" title="{"plugins.generic.reviewerRecommendationManager.settings.dragHint"|translate|escape}">&#10303;</span>
 						<span class="rrmPos">{$rec.order|escape}</span>
 						<input type="hidden" name="order_{$rec.code}" value="{$rec.order|escape}" class="rrmOrder" />
 

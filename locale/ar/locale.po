@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ar\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "مدير توصيات المحكّمين"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "إعادة تسمية (متعددة اللغات) التوصيات التي يختارها المحكّم عند إنهاء التحكيم، وإعادة ترتيبها وتعطيلها، دون تعديل نواة OJS ومع الحفاظ على سجل التحكيمات السابقة."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "اضبط قائمة التوصيات المعروضة للمحكّمين. تسري التغييرات على هذه المجلة وتظل متعددة اللغات. اترك التسمية فارغة في لغة ما للإبقاء على نص OJS الافتراضي."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "انتبه عند إعادة تسمية التسميات"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "إعادة تسمية التسمية بأثر رجعي: ستُعرض التحكيمات المُرسَلة سابقاً بالنص الجديد في المنصة كلها (المحكّم والمحرّر والمؤلف والرسائل والواجهة البرمجية). فإن غيّر التعديل معنى الإجابة، فالأفضل تعطيل الخيار القديم واستخدام خيار لم يستعمله أي تحكيم للمعنى الجديد — وهذا يتجنّب تزوير السجل."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "توصية OJS الأصلية"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "التسمية المعروضة"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "اسحب العناصر من المقبض ⠿ لتحديد ترتيب ظهورها في نموذج التحكيم."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "متاح في نموذج التحكيم"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "يستخدم هذا الخيار {$usage} من التحكيمات — إعادة تسميته تغيّر طريقة عرضها."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "لا يستخدم هذا الخيار أي تحكيم — يمكن إعادة تعريفه بأمان."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "يؤدي التعطيل إلى إزالة الخيار من نموذج التحكيم فقط. أما المحرّرون فسيظلون يرون هذه التوصية في التحكيمات السابقة التي استخدمتها."

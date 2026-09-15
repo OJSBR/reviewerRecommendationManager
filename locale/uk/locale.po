@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: uk\n"
+
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.displayName"
+msgstr "Менеджер рекомендацій рецензентів"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.description"
+msgstr "Перейменування (багатомовне), зміна порядку та вимкнення рекомендацій, які рецензент обирає під час завершення рецензії, без зміни ядра OJS і зі збереженням історії попередніх рецензій."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.description"
+msgstr "Налаштуйте список рекомендацій, який бачать рецензенти. Зміни діють для цього журналу й залишаються багатомовними. Залиште підпис порожнім якоюсь мовою, щоб зберегти типовий текст OJS."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.title"
+msgstr "Обережно з перейменуванням підписів"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
+msgstr "Перейменування підпису діє заднім числом: уже надіслані рецензії відображатимуться з новим текстом на всій платформі (рецензент, редактор, автор, листи та API). Якщо зміна змінює ЗМІСТ відповіді, краще вимкнути старий варіант і використати для нового змісту варіант із 0 рецензій — так запис не буде спотворено."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
+msgstr "Початкова рекомендація OJS"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.customLabel"
+msgstr "Показуваний підпис"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.dragHint"
+msgstr "Перетягуйте пункти за маркер ⠿, щоб задати порядок їх появи у формі рецензування."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.enabled"
+msgstr "Доступно у формі рецензування"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageWarning"
+msgstr "Цей варіант уже використано в {$usage} рецензіях — перейменування змінить їх відображення."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.usageSafe"
+msgstr "Жодна рецензія не використовує цей варіант — його можна безпечно перевизначити."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
+msgstr "Вимкнення прибирає варіант лише з форми рецензування. Редактори й далі бачать цю рекомендацію в минулих рецензіях, де її використали."
