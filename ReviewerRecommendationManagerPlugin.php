@@ -58,10 +58,10 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
         $this->registerLabelOverrides();
 
         // 2) Reorder / disable: adjust the list in the reviewer form only.
-        Hook::add('TemplateManager::fetch', $this->filterReviewerForm(...));
+        Hook::add('TemplateManager::fetch', [$this, 'filterReviewerForm']);
 
         // 3) The script of the settings form, on the page that opens it.
-        Hook::add('TemplateManager::display', $this->addSettingsScript(...));
+        Hook::add('TemplateManager::display', [$this, 'addSettingsScript']);
 
         return true;
     }
