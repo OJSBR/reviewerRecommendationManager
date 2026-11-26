@@ -26,7 +26,7 @@ msgstr "Ostrożnie ze zmianą nazw etykiet"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Zmiana nazwy etykiety działa wstecz: już przesłane recenzje będą wyświetlane z nowym tekstem w całej platformie (recenzent, redaktor, autor, e-maile i API). Jeśli zmiana zmienia ZNACZENIE odpowiedzi, lepiej wyłącz starą opcję, a dla nowego znaczenia wykorzystaj opcję z 0 recenzji — dzięki temu nie fałszujesz zapisu."
+msgstr "Zmiana nazwy etykiety działa wstecz: już przesłane recenzje będą wyświetlane z nowym tekstem w całej platformie (recenzent, redaktor, autor i e-maile). Jeśli zmiana zmienia ZNACZENIE odpowiedzi, lepiej wyłącz starą opcję, a dla nowego znaczenia wykorzystaj opcję z 0 recenzji — dzięki temu nie fałszujesz zapisu."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Żadna recenzja nie korzysta z tej opcji — można ją bezpiecznie prze
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Wyłączenie usuwa opcję tylko z formularza recenzji. Redaktorzy nadal widzą tę rekomendację przy wcześniejszych recenzjach, które z niej korzystały."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Pozostaw co najmniej jedną rekomendację dostępną w formularzu recenzji. Bez niej recenzenci nie mogą przesłać recenzji."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Ta rekomendacja nie jest już dostępna. Wybierz inną."

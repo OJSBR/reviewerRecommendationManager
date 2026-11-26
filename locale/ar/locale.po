@@ -26,7 +26,7 @@ msgstr "انتبه عند إعادة تسمية التسميات"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "إعادة تسمية التسمية بأثر رجعي: ستُعرض التحكيمات المُرسَلة سابقاً بالنص الجديد في المنصة كلها (المحكّم والمحرّر والمؤلف والرسائل والواجهة البرمجية). فإن غيّر التعديل معنى الإجابة، فالأفضل تعطيل الخيار القديم واستخدام خيار لم يستعمله أي تحكيم للمعنى الجديد — وهذا يتجنّب تزوير السجل."
+msgstr "إعادة تسمية التسمية بأثر رجعي: ستُعرض التحكيمات المُرسَلة سابقاً بالنص الجديد في المنصة كلها (المحكّم والمحرّر والمؤلف والرسائل). فإن غيّر التعديل معنى الإجابة، فالأفضل تعطيل الخيار القديم واستخدام خيار لم يستعمله أي تحكيم للمعنى الجديد — وهذا يتجنّب تزوير السجل."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "لا يستخدم هذا الخيار أي تحكيم — يمكن إع�
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "يؤدي التعطيل إلى إزالة الخيار من نموذج التحكيم فقط. أما المحرّرون فسيظلون يرون هذه التوصية في التحكيمات السابقة التي استخدمتها."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "أبقِ توصية واحدة على الأقل متاحة في نموذج التحكيم. فبدونها لا يستطيع المحكّمون إرسال تحكيمهم."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "هذه التوصية لم تعد متاحة. يرجى اختيار توصية أخرى."

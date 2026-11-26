@@ -1,25 +1,32 @@
 # Reviewer Recommendation Manager — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.4.1-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-2.0.0.0%20(OJS%203.5)%20%7C%201.0.5.0%20(OJS%203.4)-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.4.1/reviewerRecommendationManager-1.0.4.1.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.4.2-ojs3.4/reviewerRecommendationManager-1.0.4.2-ojs3.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/2.0.0.0/reviewerRecommendationManager-2.0.0.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.5.0/reviewerRecommendationManager-1.0.5.0.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that lets a journal **rename
 (multilingual), reorder and disable** the recommendations a reviewer picks when completing a
 review (Accept, Revisions Required, Resubmit, Decline, See Comments, …) — **without patching
 OJS core** and **preserving the historical record** of reviews already submitted.
 
-> **Developed and maintained by [OJSBR](https://ojsbr.com).** See the
-> [Credits & authorship](#credits--authorship) section below.
+> **Developed and maintained by [OJSBR](https://ojsbr.com), following the path opened by the
+> Public Knowledge Project:** the renaming uses the per-journal locale override of PKP's
+> [Custom Locale plugin](https://github.com/pkp/customLocale), and OJS 3.6 brings customizable
+> reviewer recommendations to the core ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)).
+> See [Credits & authorship](#credits--authorship).
 
 ## Compatibility & branches
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.4.1 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.4.2 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 2.0.0.0 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.5.0 |
+
+The first number of a release names the OJS line (1 = OJS 3.4, 2 = OJS 3.5), so a journal that
+upgrades OJS is always offered the newer line. The second follows OJS's minor version (a build
+only for OJS 3.5.1 would be 2.1.0.0); the last two count the plugin's own changes.
 
 > **OJS 3.6 note.** PKP has implemented customizable reviewer recommendations in the core
 > for OJS 3.6 ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)). This plugin
@@ -41,10 +48,14 @@ the installation.
 
 - **Rename** the six built-in reviewer recommendations, per language. Because every OJS
   surface resolves the label through `__()`, the new text shows up **everywhere** — the
-  reviewer form, the editor's dashboard, the author's view, e-mails and the REST API.
+  reviewer form, the editor's dashboard, the author's view and e-mails. The REST API returns
+  only the recommendation codes (1–6), never the text.
 - **Reorder** the options — affecting the **reviewer form only** (drag-and-drop).
 - **Disable** an option — removing it from the **reviewer form only**. Editors keep seeing
-  that recommendation on past reviews that used it; the record is never hidden.
+  that recommendation on past reviews that used it; the record is never hidden. A review keeps
+  its own recommendation in its list even after that option is disabled (a saved draft, a
+  reopened review), and the server refuses a disabled option sent by any other review. At
+  least one option must stay available, or reviewers could never submit.
 - **Impact awareness** — the settings screen shows, per option, how many historical reviews
   already use it, so you know when a rename is retroactive.
 
@@ -75,11 +86,16 @@ when renaming affects existing reviews.
   locale keys resolve to the configured labels everywhere.
 - **Reorder / disable** — a `TemplateManager::fetch` hook adjusts the
   `reviewerRecommendationOptions` variable on `reviewer/review/step3.tpl` before render — the
-  editor's view is untouched.
+  editor's view is untouched. The `reviewerreviewstep3form::Constructor` hook adds a check that
+  refuses, on submit, a disabled code that is not the review's own, telling the reviewer the
+  recommendation is no longer available; the `reviewerreviewstep3form::readUserVars` hook keeps such a code out of a
+  "Save for Later" draft, which the core does not validate.
+- **Languages removed** from the journal's form languages lose their override folder on the
+  next save, so no hidden label keeps renaming the recommendations in that language.
 - **Labels are plain text.** They become translations of core keys that the core prints
   without escaping (the reviewer grid builds its cell HTML with them) and that also reach
-  pages mounted by Vue, so markup is removed on save and the Vue delimiters `{{ }}` are broken
-  apart (`{ { } }`).
+  pages mounted by Vue, so markup is removed on save and every brace followed by another is split from it, so no
+  run of braces keeps a pair of Vue delimiters (`{{x}}` → `{ {x} }`, `{{{x}}}` → `{ { {x} } }`).
 - **Original reference** — rebuilds the locale bundle *excluding* the plugin's override path,
   so the settings screen always shows OJS's original text even after a rename.
 - Works over the **six native recommendation codes** (1–6); it does not add new codes, which
@@ -88,10 +104,12 @@ when renaming affects existing reviews.
 ## Tests
 
 - **PHPUnit** (`tests/*Test.php`, on PKP's `PKPTestCase`): the plugin classes against the installed
-  PKP, stored labels without markup or Vue delimiters, the reviewer form filtered (disabled options
-  dropped, configured order, only on the reviewer step), no settings action at site level, the
-  usage count, a settings template that only initialises the form, and the translations. From the
-  OJS root:
+  PKP, stored labels without markup or Vue delimiters (overlapping braces included), the reviewer
+  form filtered (disabled options dropped, configured order, the review's own recommendation kept,
+  only on the reviewer step), a disabled code refused on submit and kept out of a draft, settings
+  refused with every option off, override folders of removed languages deleted, no settings action
+  at site level, the usage count, a settings template that loads its own script, and the
+  translations. Run by PKP's continuous integration after Cypress; from the OJS root:
 
   ```bash
   lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/reviewerRecommendationManager/tests"
@@ -99,16 +117,26 @@ when renaming affects existing reviews.
 
 - **Cypress** (`cypress/tests/functional/ReviewerRecommendationManager.cy.js`, run by
   [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push): enables the
-  plugin, lists the six recommendations with the core wording, saves a renamed and a disabled one
-  (markup and Vue delimiters removed) and puts the settings back. With `reviewerUser`,
+  plugin and opens the settings without a reload (drag-and-drop ready), lists the six
+  recommendations with the core wording, saves a renamed and a disabled one (markup and Vue
+  delimiters removed), refuses to save with every option off and puts the settings back. With `reviewerUser`,
   `reviewerPassword` and `reviewSubmissionId` it also checks the list a reviewer receives.
-- Verified on OJS 3.5.0.3 and 3.4.0.10.
+- Verified on OJS 3.5.0.6 and 3.4.0.10.
 
 Tests are kept in the repository and are not part of the release package.
 
 ## Credits & authorship
 
-- **Developed and maintained by** [OJSBR](https://ojsbr.com) — original plugin.
+- **Developed and maintained by** [OJSBR](https://ojsbr.com).
+- Thanks to the **Public Knowledge Project** for the
+  [Custom Locale plugin](https://github.com/pkp/customLocale) (GPL v3): renaming the
+  recommendations per journal follows its approach of per-context locale overrides.
+- Thanks to the **Public Knowledge Project** for the customizable reviewer recommendations of
+  OJS 3.6 ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)), the core answer to
+  the same need; this plugin covers OJS 3.4 and 3.5 until then.
+- Thanks to **Bozana Bokan** (PKP) for the plugin gallery review
+  ([pkp/plugin-gallery#513](https://github.com/pkp/plugin-gallery/pull/513)) that shaped
+  releases 2.0.0.0 and 1.0.5.0.
 - Distributed under the **GNU GPL v3**.
 
 ## AI use
@@ -135,15 +163,22 @@ Plugin genérico para o **Open Journal Systems (OJS)** que permite à revista **
 avaliação (Aceitar, Correções obrigatórias, Submeter novamente, Rejeitar, Ver comentários…) —
 **sem alterar o núcleo do OJS** e **preservando o histórico** dos pareceres já emitidos.
 
-> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com).** Veja a seção
-> [Créditos e autoria](#créditos-e-autoria) abaixo.
+> **Desenvolvido e mantido pela [OJSBR](https://ojsbr.com), seguindo o caminho aberto pelo
+> Public Knowledge Project:** renomear usa a sobreposição de traduções por revista do
+> [plugin Custom Locale](https://github.com/pkp/customLocale) da PKP, e o OJS 3.6 traz recomendações
+> configuráveis no núcleo ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)).
+> Veja [Créditos e autoria](#créditos-e-autoria).
 
 ### Compatibilidade e branches
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 1.0.4.1 |
-| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.4.2 |
+| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 2.0.0.0 |
+| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.5.0 |
+
+O primeiro número da release indica a linha do OJS (1 = OJS 3.4, 2 = OJS 3.5), para que a revista
+que atualiza o OJS sempre receba a linha mais nova. O segundo acompanha a versão menor do OJS (um
+build só para o OJS 3.5.1 seria 2.1.0.0); os dois últimos contam as mudanças do próprio plugin.
 
 As duas branches têm o mesmo código. As pastas de idioma seguem os códigos de cada linha do OJS
 (OJS 3.4: `fr_FR`, `pt_PT`, `nb`, `sr@latin`, `zh_CN`; OJS 3.5: `fr`, `pt`, `nb_NO`, `sr_Latn`,
@@ -161,11 +196,15 @@ as revistas da instalação.
 
 - **Renomear** as seis recomendações nativas, por idioma. Como todo o OJS resolve o rótulo
   via `__()`, o novo texto aparece **em todo lugar** — formulário do avaliador, painel do
-  editor, visão do autor, e-mails e API REST.
+  editor, visão do autor e e-mails. A API REST devolve só os códigos das recomendações (1–6),
+  nunca o texto.
 - **Reordenar** as opções — afetando **apenas o formulário do avaliador** (arrastar-e-soltar).
 - **Desativar** uma opção — removendo-a **apenas do formulário do avaliador**. O editor
   continua vendo essa recomendação nos pareceres antigos que a utilizaram; o histórico nunca
-  é escondido.
+  é escondido. O parecer mantém a sua própria recomendação na lista mesmo depois que a opção é
+  desativada (rascunho salvo, parecer reaberto), e o servidor recusa a opção desativada enviada
+  por qualquer outro parecer. Pelo menos uma opção precisa ficar disponível; sem nenhuma, o
+  avaliador nunca conseguiria enviar o parecer.
 - **Consciência de impacto** — a tela de configuração mostra, por opção, quantos pareceres
   históricos já a usam, deixando claro quando um renomear é retroativo.
 
@@ -191,19 +230,31 @@ selo de impacto avisa quando o renomear afeta pareceres existentes.
 ### Testes
 
 PHPUnit em `tests/*Test.php`, sobre o `PKPTestCase` do PKP: classes do plugin contra o PKP instalado,
-rótulos gravados sem marcação nem delimitadores do Vue, formulário do avaliador filtrado (opções
-desativadas fora, ordem configurada, só no passo do avaliador), nenhuma ação de configuração no
-nível do site, contagem de uso, template de configuração que só inicializa o formulário e as
-traduções. Cypress em `cypress/tests/functional/`, rodado pelo
-[pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push: liga o plugin, lista as
-seis recomendações com o texto do núcleo, salva uma renomeada e uma desativada (sem marcação) e
-devolve a configuração; com `reviewerUser`, `reviewerPassword` e `reviewSubmissionId` confere também
-a lista que o avaliador recebe. Verificado no OJS 3.5.0.3 e 3.4.0.10. Os testes ficam no repositório
+rótulos gravados sem marcação nem delimitadores do Vue (inclusive chaves sobrepostas), formulário do
+avaliador filtrado (opções desativadas fora, ordem configurada, a recomendação do próprio parecer
+mantida, só no passo do avaliador), código desativado recusado no envio e fora do rascunho,
+configuração recusada com todas as opções desligadas, pastas de idiomas retirados apagadas, nenhuma
+ação de configuração no nível do site, contagem de uso, template de configuração que carrega o
+próprio script e as traduções. Cypress em `cypress/tests/functional/`, rodado pelo
+[pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push, seguido do PHPUnit: liga
+o plugin e abre a configuração sem recarregar (arrastar pronto), lista as seis recomendações com o
+texto do núcleo, salva uma renomeada e uma desativada (sem marcação), recusa salvar com todas
+desligadas e devolve a configuração; com `reviewerUser`, `reviewerPassword` e `reviewSubmissionId`
+confere também a lista que o avaliador recebe. Verificado no OJS 3.5.0.6 e 3.4.0.10. Os testes ficam no repositório
 e não vão no pacote de release.
 
 ### Créditos e autoria
 
-- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com) — plugin autoral.
+- **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com).
+- Agradecimento ao **Public Knowledge Project** pelo
+  [plugin Custom Locale](https://github.com/pkp/customLocale) (GPL v3): renomear as recomendações
+  por revista segue a abordagem dele de sobrepor traduções por contexto.
+- Agradecimento ao **Public Knowledge Project** pelas recomendações configuráveis do OJS 3.6
+  ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)), a resposta do núcleo à mesma
+  necessidade; este plugin atende o OJS 3.4 e 3.5 até lá.
+- Agradecimento a **Bozana Bokan** (PKP) pela revisão na galeria de plugins
+  ([pkp/plugin-gallery#513](https://github.com/pkp/plugin-gallery/pull/513)), que moldou as releases
+  2.0.0.0 e 1.0.5.0.
 - Distribuído sob a **GNU GPL v3**.
 
 ### Uso de IA

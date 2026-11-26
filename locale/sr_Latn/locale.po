@@ -26,7 +26,7 @@ msgstr "Oprez pri preimenovanju oznaka"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Preimenovanje oznake deluje retroaktivno: već poslate recenzije prikazivaće se sa novim tekstom na celoj platformi (recenzent, urednik, autor, e-poruke i API). Ako izmena menja ZNAČENJE odgovora, bolje onemogućite staru opciju i za novo značenje upotrebite opciju sa 0 recenzija — tako se zapis ne falsifikuje."
+msgstr "Preimenovanje oznake deluje retroaktivno: već poslate recenzije prikazivaće se sa novim tekstom na celoj platformi (recenzent, urednik, autor i e-poruke). Ako izmena menja ZNAČENJE odgovora, bolje onemogućite staru opciju i za novo značenje upotrebite opciju sa 0 recenzija — tako se zapis ne falsifikuje."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Nijedna recenzija ne koristi ovu opciju — bezbedno se može redefinisa
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Onemogućavanje uklanja opciju samo iz formulara recenzenta. Urednici i dalje vide ovu preporuku u ranijim recenzijama koje su je koristile."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Ostavite bar jednu preporuku dostupnu u obrascu za recenziju. Bez nje recenzenti ne mogu da pošalju recenziju."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Ova preporuka više nije dostupna. Izaberite drugu."

@@ -21,7 +21,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Compte en reanomenar les etiquetes"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Reanomenar una etiqueta és retroactiu: les revisions ja enviades es mostraran amb el text nou a tota la plataforma (revisor, editor, autor, correus i API). Si el canvi altera el SIGNIFICAT de la resposta, val més desactivar l'opció antiga i reutilitzar una opció amb 0 revisions per al significat nou: així no es falseja el registre."
+msgstr "Reanomenar una etiqueta és retroactiu: les revisions ja enviades es mostraran amb el text nou a tota la plataforma (revisor, editor, autor i correus). Si el canvi altera el SIGNIFICAT de la resposta, val més desactivar l'opció antiga i reutilitzar una opció amb 0 revisions per al significat nou: així no es falseja el registre."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Recomanació original de l'OJS"
@@ -43,3 +43,9 @@ msgstr "Cap revisió no fa servir aquesta opció: es pot redefinir sense problem
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Desactivar-la només treu l'opció del formulari de revisió. Els editors continuen veient aquesta recomanació a les revisions anteriors que la van fer servir."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Manteniu almenys una recomanació disponible al formulari de revisió. Sense cap, els revisors no poden enviar la seva revisió."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Aquesta recomanació ja no està disponible. Trieu-ne una altra."

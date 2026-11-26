@@ -21,7 +21,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Coidado ao renomear as etiquetas"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Renomear unha etiqueta é retroactivo: as revisións xa enviadas amosaranse co novo texto en toda a plataforma (revisión, edición, autoría, correos e API). Se o cambio altera o SIGNIFICADO da resposta, é mellor desactivar a opción antiga e reutilizar unha opción con 0 revisións para o novo significado — así non se falsea o rexistro."
+msgstr "Renomear unha etiqueta é retroactivo: as revisións xa enviadas amosaranse co novo texto en toda a plataforma (revisión, edición, autoría e correos). Se o cambio altera o SIGNIFICADO da resposta, é mellor desactivar a opción antiga e reutilizar unha opción con 0 revisións para o novo significado — así non se falsea o rexistro."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Recomendación orixinal de OJS"
@@ -43,3 +43,9 @@ msgstr "Ningunha revisión emprega esta opción — pódese redefinir con seguri
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Desactivala só quita a opción do formulario de revisión. O persoal editor segue vendo esta recomendación nas revisións anteriores que a empregaron."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Manteña polo menos unha recomendación dispoñible no formulario de revisión. Sen ningunha, as persoas revisoras non poden enviar a súa revisión."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Esta recomendación xa non está dispoñible. Escolla outra."

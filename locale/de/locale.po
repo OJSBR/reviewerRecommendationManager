@@ -23,7 +23,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Vorsicht beim Umbenennen von Bezeichnungen"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Das Umbenennen einer Bezeichnung wirkt rückwirkend: Bereits eingereichte Gutachten werden auf der gesamten Plattform mit dem neuen Text angezeigt (Gutachter/in, Redakteur/in, Autor/in, E-Mails und API). Wenn die Änderung die BEDEUTUNG der Antwort verändert, deaktivieren Sie besser die bisherige Option und verwenden Sie eine Option mit 0 Gutachten für die neue Bedeutung — so wird die Historie nicht verfälscht."
+msgstr "Das Umbenennen einer Bezeichnung wirkt rückwirkend: Bereits eingereichte Gutachten werden auf der gesamten Plattform mit dem neuen Text angezeigt (Gutachter/in, Redakteur/in, Autor/in und E-Mails). Wenn die Änderung die BEDEUTUNG der Antwort verändert, deaktivieren Sie besser die bisherige Option und verwenden Sie eine Option mit 0 Gutachten für die neue Bedeutung — so wird die Historie nicht verfälscht."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Ursprüngliche OJS-Empfehlung"
@@ -45,3 +45,9 @@ msgstr "0 Gutachten verwenden diese Option — eine Neudefinition ist unbedenkli
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Das Deaktivieren entfernt die Option nur aus dem Gutachtenformular. Redakteur/innen sehen diese Empfehlung weiterhin bei früheren Gutachten, die sie verwendet haben."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Lassen Sie mindestens eine Empfehlung im Gutachtenformular verfügbar. Ohne sie können Gutachter/innen ihr Gutachten nicht einreichen."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Diese Empfehlung ist nicht mehr verfügbar. Bitte wählen Sie eine andere."

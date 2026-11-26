@@ -26,7 +26,7 @@ msgstr "Vær opmærksom ved omdøbning af etiketter"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Omdøbning af en etiket er tilbagevirkende: allerede indsendte bedømmelser vises med den nye tekst i hele platformen (bedømmer, redaktør, forfatter, e-mails og API). Hvis ændringen ændrer svarets BETYDNING, er det bedre at deaktivere den gamle mulighed og bruge en mulighed med 0 bedømmelser til den nye betydning — så forfalskes registreringen ikke."
+msgstr "Omdøbning af en etiket er tilbagevirkende: allerede indsendte bedømmelser vises med den nye tekst i hele platformen (bedømmer, redaktør, forfatter og e-mails). Hvis ændringen ændrer svarets BETYDNING, er det bedre at deaktivere den gamle mulighed og bruge en mulighed med 0 bedømmelser til den nye betydning — så forfalskes registreringen ikke."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Ingen bedømmelser bruger denne mulighed — den kan trygt omdefineres."
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Deaktivering fjerner kun muligheden fra bedømmerformularen. Redaktørerne ser fortsat denne anbefaling i tidligere bedømmelser, der brugte den."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Hold mindst én anbefaling tilgængelig i bedømmelsesformularen. Uden den kan bedømmere ikke indsende deres bedømmelse."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Denne anbefaling er ikke længere tilgængelig. Vælg venligst en anden."

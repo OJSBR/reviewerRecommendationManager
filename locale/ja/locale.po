@@ -26,7 +26,7 @@ msgstr "ラベル名の変更にご注意ください"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "ラベル名の変更はさかのぼって効きます。すでに提出された査読も、プラットフォーム全体（査読者・編集者・著者・メール・API）で新しい文言で表示されます。回答の「意味」が変わる変更なら、古い選択肢を無効にし、査読数 0 の選択肢を新しい意味に割り当ててください。記録の改ざんを避けられます。"
+msgstr "ラベル名の変更はさかのぼって効きます。すでに提出された査読も、プラットフォーム全体（査読者・編集者・著者・メール）で新しい文言で表示されます。回答の「意味」が変わる変更なら、古い選択肢を無効にし、査読数 0 の選択肢を新しい意味に割り当ててください。記録の改ざんを避けられます。"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "この選択肢を使っている査読はありません — 安全に�
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "無効にしても、選択肢が消えるのは査読フォームだけです。編集者は、その選択肢を使った過去の査読では引き続きこの推奨意見を見ることができます。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "査読フォームで選べる推奨意見を少なくとも 1 つ残してください。ひとつもないと、査読者は査読を提出できません。"
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "この推奨意見は現在選択できません。別の推奨意見を選んでください。"

@@ -26,7 +26,7 @@ msgstr "Berhati-hati semasa menamakan semula label"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Menamakan semula label bersifat retroaktif: penilaian yang telah dihantar akan dipaparkan dengan teks baharu di seluruh platform (penilai, editor, penulis, e-mel dan API). Jika perubahan mengubah MAKNA jawapan, lebih baik nyahdayakan pilihan lama dan gunakan pilihan dengan 0 penilaian untuk makna baharu — ini mengelakkan rekod dipalsukan."
+msgstr "Menamakan semula label bersifat retroaktif: penilaian yang telah dihantar akan dipaparkan dengan teks baharu di seluruh platform (penilai, editor, penulis dan e-mel). Jika perubahan mengubah MAKNA jawapan, lebih baik nyahdayakan pilihan lama dan gunakan pilihan dengan 0 penilaian untuk makna baharu — ini mengelakkan rekod dipalsukan."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Tiada penilaian menggunakan pilihan ini — selamat untuk ditakrifkan se
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Menyahdayakan hanya membuang pilihan itu daripada borang penilai. Editor masih melihat cadangan ini pada penilaian lalu yang menggunakannya."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Kekalkan sekurang-kurangnya satu cadangan dalam borang penilaian. Tanpanya, penilai tidak dapat menghantar penilaian mereka."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Cadangan ini tidak lagi tersedia. Sila pilih yang lain."

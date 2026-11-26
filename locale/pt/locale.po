@@ -23,7 +23,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Atenção ao alterar rótulos"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Renomear um rótulo é retroativo: os pareceres já emitidos passam a ser apresentados com o novo texto em toda a plataforma (revisor, editor, autor, e-mails e API). Se a alteração muda o SENTIDO da resposta, prefira desativar a opção antiga e reaproveitar uma opção com 0 pareceres para o novo significado — assim o histórico não é falsificado."
+msgstr "Renomear um rótulo é retroativo: os pareceres já emitidos passam a ser apresentados com o novo texto em toda a plataforma (revisor, editor, autor e e-mails). Se a alteração muda o SENTIDO da resposta, prefira desativar a opção antiga e reaproveitar uma opção com 0 pareceres para o novo significado — assim o histórico não é falsificado."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Recomendação original do OJS"
@@ -45,3 +45,9 @@ msgstr "0 pareceres utilizam esta opção — seguro redefinir."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Desativar remove a opção apenas do formulário do revisor. O editor continua a ver essa recomendação nos pareceres antigos que a utilizaram."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Mantenha pelo menos uma recomendação disponível no formulário do revisor. Sem nenhuma, os revisores não conseguem submeter o parecer."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Esta recomendação já não está disponível. Escolha outra."

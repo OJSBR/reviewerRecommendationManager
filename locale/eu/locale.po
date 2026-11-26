@@ -26,7 +26,7 @@ msgstr "Kontuz etiketak berrizendatzean"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Etiketa berrizendatzea atzeraeragina da: dagoeneko bidalitako ebaluazioak testu berriarekin agertuko dira plataforma osoan (ebaluatzailea, editorea, egilea, mezuak eta APIa). Aldaketak erantzunaren ESANAHIA aldatzen badu, hobe da aukera zaharra desgaitzea eta esanahi berrirako 0 ebaluazio dituen aukera bat erabiltzea — horrela erregistroa ez da faltsutzen."
+msgstr "Etiketa berrizendatzea atzeraeragina da: dagoeneko bidalitako ebaluazioak testu berriarekin agertuko dira plataforma osoan (ebaluatzailea, editorea, egilea eta mezuak). Aldaketak erantzunaren ESANAHIA aldatzen badu, hobe da aukera zaharra desgaitzea eta esanahi berrirako 0 ebaluazio dituen aukera bat erabiltzea — horrela erregistroa ez da faltsutzen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Ebaluazio bakar batek ere ez du aukera hau erabiltzen — lasai birdefin
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Desgaituz gero, aukera ebaluazio-inprimakitik soilik kentzen da. Editoreek gomendio hori ikusten jarraituko dute erabili zuten aurreko ebaluazioetan."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Utzi gutxienez gomendio bat eskuragarri ebaluazio-formularioan. Bat ere gabe, ebaluatzaileek ezin dute beren ebaluazioa bidali."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Gomendio hau ez dago erabilgarri jada. Aukeratu beste bat."

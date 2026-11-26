@@ -26,7 +26,7 @@ msgstr "Var försiktig när du byter namn på etiketter"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Att byta namn på en etikett gäller retroaktivt: redan inskickade granskningar visas med den nya texten i hela plattformen (granskare, redaktör, författare, e-post och API). Om ändringen förändrar svarets BETYDELSE är det bättre att inaktivera det gamla alternativet och använda ett alternativ med 0 granskningar för den nya betydelsen – då förfalskas inte uppgifterna."
+msgstr "Att byta namn på en etikett gäller retroaktivt: redan inskickade granskningar visas med den nya texten i hela plattformen (granskare, redaktör, författare och e-post). Om ändringen förändrar svarets BETYDELSE är det bättre att inaktivera det gamla alternativet och använda ett alternativ med 0 granskningar för den nya betydelsen – då förfalskas inte uppgifterna."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Inga granskningar använder det här alternativet – det kan tryggt def
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Att inaktivera tar bort alternativet endast från granskningsformuläret. Redaktörerna ser fortfarande rekommendationen i tidigare granskningar som använde den."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Behåll minst en rekommendation tillgänglig i granskningsformuläret. Utan den kan granskare inte skicka in sin granskning."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Den här rekommendationen är inte längre tillgänglig. Välj en annan."

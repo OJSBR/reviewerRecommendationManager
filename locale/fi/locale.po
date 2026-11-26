@@ -26,7 +26,7 @@ msgstr "Ole varovainen nimikkeitä muuttaessasi"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Nimikkeen muuttaminen vaikuttaa takautuvasti: jo lähetetyt arviot näkyvät uudella tekstillä koko alustalla (arvioija, toimittaja, kirjoittaja, sähköpostit ja API). Jos muutos muuttaa vastauksen MERKITYSTÄ, poista vanha vaihtoehto käytöstä ja ota uudelle merkitykselle vaihtoehto, jolla on 0 arviota — näin tietue ei vääristy."
+msgstr "Nimikkeen muuttaminen vaikuttaa takautuvasti: jo lähetetyt arviot näkyvät uudella tekstillä koko alustalla (arvioija, toimittaja, kirjoittaja ja sähköpostit). Jos muutos muuttaa vastauksen MERKITYSTÄ, poista vanha vaihtoehto käytöstä ja ota uudelle merkitykselle vaihtoehto, jolla on 0 arviota — näin tietue ei vääristy."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Yksikään arvio ei käytä tätä vaihtoehtoa — sen voi määritellä
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Poistaminen käytöstä poistaa vaihtoehdon vain arvioijan lomakkeelta. Toimittajat näkevät suosituksen edelleen niissä aiemmissa arvioissa, joissa sitä on käytetty."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Jätä arviointilomakkeeseen vähintään yksi suositus. Ilman sitä arvioijat eivät voi lähettää arviotaan."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Tämä suositus ei ole enää käytettävissä. Valitse toinen."

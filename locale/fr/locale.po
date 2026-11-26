@@ -23,7 +23,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Attention lors du renommage des libellés"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Renommer un libellé est rétroactif : les évaluations déjà soumises s'afficheront avec le nouveau texte dans toute la plateforme (évaluateur·rice, rédacteur·rice, auteur·e, courriels et API). Si le changement modifie le SENS de la réponse, préférez désactiver l'ancienne option et réaffecter une option comptant 0 évaluation au nouveau sens — cela évite de falsifier l'historique."
+msgstr "Renommer un libellé est rétroactif : les évaluations déjà soumises s'afficheront avec le nouveau texte dans toute la plateforme (évaluateur·rice, rédacteur·rice, auteur·e et courriels). Si le changement modifie le SENS de la réponse, préférez désactiver l'ancienne option et réaffecter une option comptant 0 évaluation au nouveau sens — cela évite de falsifier l'historique."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Recommandation d'origine d'OJS"
@@ -45,3 +45,9 @@ msgstr "0 évaluation n'utilise cette option — sa redéfinition est sans risqu
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "La désactivation retire l'option uniquement du formulaire d'évaluation. Le·la rédacteur·rice continue de voir cette recommandation sur les évaluations passées qui l'ont utilisée."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Gardez au moins une recommandation disponible dans le formulaire d'évaluation. Sans aucune, les évaluateur·rice·s ne peuvent pas soumettre leur évaluation."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Cette recommandation n'est plus disponible. Veuillez en choisir une autre."

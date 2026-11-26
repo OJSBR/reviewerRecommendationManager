@@ -26,7 +26,7 @@ msgstr "სიფრთხილე იარლიყების გადა�
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "იარლიყის გადარქმევა უკუძალის მქონეა: უკვე გაგზავნილი რეცენზიები მთელ პლატფორმაზე ახალი ტექსტით გამოჩნდება (რეცენზენტი, რედაქტორი, ავტორი, წერილები და API). თუ ცვლილება პასუხის მნიშვნელობას ცვლის, სჯობს ძველი ვარიანტი გამორთოთ და ახალი მნიშვნელობისთვის 0 რეცენზიის მქონე ვარიანტი გამოიყენოთ — ასე ჩანაწერი არ გაყალბდება."
+msgstr "იარლიყის გადარქმევა უკუძალის მქონეა: უკვე გაგზავნილი რეცენზიები მთელ პლატფორმაზე ახალი ტექსტით გამოჩნდება (რეცენზენტი, რედაქტორი, ავტორი და წერილები). თუ ცვლილება პასუხის მნიშვნელობას ცვლის, სჯობს ძველი ვარიანტი გამორთოთ და ახალი მნიშვნელობისთვის 0 რეცენზიის მქონე ვარიანტი გამოიყენოთ — ასე ჩანაწერი არ გაყალბდება."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "ამ ვარიანტს არცერთი რეცენზ
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "გამორთვა ვარიანტს მხოლოდ რეცენზენტის ფორმიდან შლის. რედაქტორები ამ რეკომენდაციას კვლავ დაინახავენ იმ წინა რეცენზიებში, სადაც ის გამოიყენეს."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "რეცენზიის ფორმაში დატოვეთ ხელმისაწვდომი მინიმუმ ერთი რეკომენდაცია. მის გარეშე რეცენზენტები ვერ გაგზავნიან რეცენზიას."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "ეს რეკომენდაცია აღარ არის ხელმისაწვდომი. გთხოვთ, აირჩიოთ სხვა."

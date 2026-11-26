@@ -26,7 +26,7 @@ msgstr "Thận trọng khi đổi tên nhãn"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Đổi tên nhãn có hiệu lực hồi tố: các bản phản biện đã gửi sẽ hiển thị bằng văn bản mới trên toàn hệ thống (người phản biện, biên tập viên, tác giả, thư điện tử và API). Nếu thay đổi làm biến đổi Ý NGHĨA của câu trả lời, nên tắt lựa chọn cũ và dùng một lựa chọn có 0 bản phản biện cho ý nghĩa mới — cách này tránh làm sai lệch hồ sơ."
+msgstr "Đổi tên nhãn có hiệu lực hồi tố: các bản phản biện đã gửi sẽ hiển thị bằng văn bản mới trên toàn hệ thống (người phản biện, biên tập viên, tác giả và thư điện tử). Nếu thay đổi làm biến đổi Ý NGHĨA của câu trả lời, nên tắt lựa chọn cũ và dùng một lựa chọn có 0 bản phản biện cho ý nghĩa mới — cách này tránh làm sai lệch hồ sơ."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Không có bản phản biện nào dùng lựa chọn này — có th�
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Việc tắt chỉ gỡ lựa chọn khỏi biểu mẫu phản biện. Biên tập viên vẫn thấy khuyến nghị này ở các bản phản biện trước đã dùng nó."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Hãy giữ ít nhất một khuyến nghị trong biểu mẫu phản biện. Nếu không có, người phản biện không thể gửi bản phản biện."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Khuyến nghị này không còn khả dụng. Vui lòng chọn khuyến nghị khác."

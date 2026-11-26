@@ -26,7 +26,7 @@ msgstr "Legyen óvatos a címkék átnevezésekor"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "A címke átnevezése visszamenőleges: a már beküldött bírálatok az új szöveggel jelennek meg az egész platformon (bíráló, szerkesztő, szerző, e-mailek és API). Ha a változtatás megváltoztatja a válasz JELENTÉSÉT, inkább tiltsa le a régi lehetőséget, és az új jelentéshez használjon 0 bírálattal rendelkező lehetőséget – így nem hamisítja meg a nyilvántartást."
+msgstr "A címke átnevezése visszamenőleges: a már beküldött bírálatok az új szöveggel jelennek meg az egész platformon (bíráló, szerkesztő, szerző és e-mailek). Ha a változtatás megváltoztatja a válasz JELENTÉSÉT, inkább tiltsa le a régi lehetőséget, és az új jelentéshez használjon 0 bírálattal rendelkező lehetőséget – így nem hamisítja meg a nyilvántartást."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Egyetlen bírálat sem használja ezt a lehetőséget – biztonságosan
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "A kikapcsolás csak a bírálói űrlapról távolítja el a lehetőséget. A szerkesztők továbbra is látják ezt az ajánlást azoknál a korábbi bírálatoknál, amelyek használták."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Hagyjon legalább egy javaslatot elérhetőnek a bírálati űrlapon. Enélkül a bírálók nem tudják beküldeni a bírálatukat."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Ez a javaslat már nem érhető el. Kérjük, válasszon másikat."

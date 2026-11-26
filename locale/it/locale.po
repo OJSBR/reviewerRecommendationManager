@@ -23,7 +23,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Attenzione nel rinominare le etichette"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Rinominare un'etichetta è retroattivo: le revisioni già inviate verranno mostrate con il nuovo testo in tutta la piattaforma (revisore, curatore, autore, e-mail e API). Se la modifica altera il SIGNIFICATO della risposta, è preferibile disattivare l'opzione precedente e riutilizzare un'opzione con 0 revisioni per il nuovo significato — così si evita di falsificare lo storico."
+msgstr "Rinominare un'etichetta è retroattivo: le revisioni già inviate verranno mostrate con il nuovo testo in tutta la piattaforma (revisore, curatore, autore ed e-mail). Se la modifica altera il SIGNIFICATO della risposta, è preferibile disattivare l'opzione precedente e riutilizzare un'opzione con 0 revisioni per il nuovo significato — così si evita di falsificare lo storico."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Raccomandazione originale di OJS"
@@ -45,3 +45,9 @@ msgstr "0 revisioni usano questa opzione — è sicuro ridefinirla."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "La disattivazione rimuove l'opzione solo dal modulo del revisore. Il curatore continua a vedere questa raccomandazione nelle revisioni passate che l'hanno utilizzata."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Mantieni almeno una raccomandazione disponibile nel modulo di revisione. Senza nessuna, i revisori non possono inviare la loro revisione."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Questa raccomandazione non è più disponibile. Scegline un'altra."

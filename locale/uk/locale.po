@@ -26,7 +26,7 @@ msgstr "Обережно з перейменуванням підписів"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Перейменування підпису діє заднім числом: уже надіслані рецензії відображатимуться з новим текстом на всій платформі (рецензент, редактор, автор, листи та API). Якщо зміна змінює ЗМІСТ відповіді, краще вимкнути старий варіант і використати для нового змісту варіант із 0 рецензій — так запис не буде спотворено."
+msgstr "Перейменування підпису діє заднім числом: уже надіслані рецензії відображатимуться з новим текстом на всій платформі (рецензент, редактор, автор і листи). Якщо зміна змінює ЗМІСТ відповіді, краще вимкнути старий варіант і використати для нового змісту варіант із 0 рецензій — так запис не буде спотворено."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Жодна рецензія не використовує цей вар�
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Вимкнення прибирає варіант лише з форми рецензування. Редактори й далі бачать цю рекомендацію в минулих рецензіях, де її використали."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Залиште у формі рецензії хоча б одну доступну рекомендацію. Без неї рецензенти не зможуть надіслати рецензію."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Ця рекомендація більше недоступна. Виберіть іншу."

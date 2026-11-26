@@ -26,7 +26,7 @@ msgstr "Atenție la redenumirea etichetelor"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Redenumirea unei etichete este retroactivă: recenziile deja trimise vor fi afișate cu noul text în toată platforma (recenzent, editor, autor, e-mailuri și API). Dacă modificarea schimbă SENSUL răspunsului, mai bine dezactivați opțiunea veche și folosiți pentru noul sens o opțiune cu 0 recenzii — astfel nu falsificați înregistrarea."
+msgstr "Redenumirea unei etichete este retroactivă: recenziile deja trimise vor fi afișate cu noul text în toată platforma (recenzent, editor, autor și e-mailuri). Dacă modificarea schimbă SENSUL răspunsului, mai bine dezactivați opțiunea veche și folosiți pentru noul sens o opțiune cu 0 recenzii — astfel nu falsificați înregistrarea."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Nicio recenzie nu folosește această opțiune — poate fi redefinită 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Dezactivarea elimină opțiunea doar din formularul de recenzie. Editorii văd în continuare această recomandare la recenziile anterioare care au folosit-o."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Păstrați cel puțin o recomandare disponibilă în formularul de recenzie. Fără ea, recenzenții nu își pot trimite recenzia."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Această recomandare nu mai este disponibilă. Alegeți alta."
