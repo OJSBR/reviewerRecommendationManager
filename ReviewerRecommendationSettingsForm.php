@@ -17,6 +17,7 @@ namespace APP\plugins\generic\reviewerRecommendationManager;
 use APP\template\TemplateManager;
 use PKP\form\Form;
 use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorCustom;
 use PKP\form\validation\FormValidatorPost;
 
 class ReviewerRecommendationSettingsForm extends Form
@@ -26,6 +27,29 @@ class ReviewerRecommendationSettingsForm extends Form
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
         $this->addCheck(new FormValidatorPost($this));
         $this->addCheck(new FormValidatorCSRF($this));
+
+        // With every recommendation off, reviewers would only see "Choose One"
+        // and could never submit a review.
+        $this->addCheck(new FormValidatorCustom(
+            $this,
+            'enabled_' . $this->codes()[0],
+            'required',
+            'plugins.generic.reviewerRecommendationManager.settings.noneEnabled',
+            fn () => $this->hasEnabledRecommendation()
+        ));
+    }
+
+    /**
+     * Whether the data sent keeps at least one recommendation available to reviewers.
+     */
+    public function hasEnabledRecommendation(): bool
+    {
+        foreach ($this->codes() as $code) {
+            if ($this->getData("enabled_{$code}")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -107,6 +131,7 @@ class ReviewerRecommendationSettingsForm extends Form
         $templateMgr->assign([
             'pluginName' => $this->plugin->getName(),
             'rrmStyleUrl' => $request->getBaseUrl() . '/' . $this->plugin->getPluginPath() . '/css/settingsForm.css',
+            'rrmScriptUrl' => $request->getBaseUrl() . '/' . $this->plugin->getPluginPath() . '/js/settingsForm.js',
             'recommendations' => $recommendations,
         ]);
         return parent::fetch($request, $template, $display);

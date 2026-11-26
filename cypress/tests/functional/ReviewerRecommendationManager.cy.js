@@ -156,6 +156,9 @@ describe('Reviewer Recommendation Manager plugin', function() {
 			openPluginsTab();
 			enablePlugin('reviewerrecommendationmanagerplugin');
 			openSettings();
+			// The plugin may have been enabled in this very page: the form brings its own
+			// script, so drag-and-drop works without a reload.
+			cy.get('#rrmSortable').should('have.class', 'ui-sortable');
 			cy.get(settingsForm + ' .rrmCard').should('have.length', 6);
 			[1, 2, 3, 4, 5, 6].forEach((code) => {
 				cy.get(settingsForm + ' .rrmCard[data-code="' + code + '"] .rrmIdentText').invoke('text').should('not.be.empty');
@@ -175,6 +178,20 @@ describe('Reviewer Recommendation Manager plugin', function() {
 			openSettings();
 			cy.get(label(1)).should('have.value', 'Accept as is { {7*7} }');
 			cy.get(enabled(6)).should('not.be.checked');
+		});
+
+		it('Refuses to save with every recommendation off', function() {
+			login(adminUser, adminPassword);
+			openPluginsTab();
+			openSettings();
+			[1, 2, 3, 4, 5, 6].forEach((code) => cy.get(enabled(code)).uncheck({force: true}));
+			cy.get(settingsForm + ' button[id^="submitFormButton-"]').click({force: true});
+			waitJQuery();
+
+			// The form stays open with the error, in whatever language the journal uses.
+			cy.get(settingsForm + ' #reviewerRecommendationManagerSettingsFormNotification', {timeout: 10000}).invoke('text').should('match', /\S/);
+			cy.get(settingsForm).should('exist');
+			cy.get(settingsForm + ' .rrmToggleInput:checked').should('have.length', 0);
 		});
 	});
 

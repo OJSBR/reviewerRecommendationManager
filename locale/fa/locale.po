@@ -26,7 +26,7 @@ msgstr "در تغییر نام برچسب‌ها دقت کنید"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "تغییر نام برچسب اثر بازگشتی دارد: داوری‌های ارسال‌شده در سراسر سامانه با متن جدید نمایش داده می‌شوند (داور، سردبیر، نویسنده، ایمیل‌ها و API). اگر تغییر، معنای پاسخ را دگرگون می‌کند، بهتر است گزینهٔ قدیمی را غیرفعال کنید و برای معنای تازه از گزینه‌ای با ۰ داوری استفاده کنید — این کار از تحریف سوابق جلوگیری می‌کند."
+msgstr "تغییر نام برچسب اثر بازگشتی دارد: داوری‌های ارسال‌شده در سراسر سامانه با متن جدید نمایش داده می‌شوند (داور، سردبیر، نویسنده و ایمیل‌ها). اگر تغییر، معنای پاسخ را دگرگون می‌کند، بهتر است گزینهٔ قدیمی را غیرفعال کنید و برای معنای تازه از گزینه‌ای با ۰ داوری استفاده کنید — این کار از تحریف سوابق جلوگیری می‌کند."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "هیچ داوری‌ای از این گزینه استفاده نمی‌
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "غیرفعال کردن، گزینه را فقط از فرم داوری حذف می‌کند. سردبیران همچنان این توصیه را در داوری‌های گذشته‌ای که از آن استفاده کرده‌اند می‌بینند."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "دست‌کم یک توصیه را در فرم داوری فعال نگه دارید. بدون آن، داوران نمی‌توانند داوری خود را ارسال کنند."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "این توصیه دیگر در دسترس نیست. لطفاً توصیهٔ دیگری انتخاب کنید."

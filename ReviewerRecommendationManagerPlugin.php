@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\DB;
 use PKP\core\JSONMessage;
 use PKP\facades\Locale;
 use PKP\file\ContextFileManager;
+use PKP\form\Form;
+use PKP\form\validation\FormValidatorCustom;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
@@ -36,6 +38,13 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
 
     /** Reviewer step 3 template, where the recommendation list is built. */
     public const REVIEWER_STEP3_TEMPLATE = 'reviewer/review/step3.tpl';
+
+    /**
+     * Hooks of the reviewer step 3 form. The form names them after its class in
+     * lower case; only the "Constructor" suffix keeps its capital letter.
+     */
+    public const REVIEWER_STEP3_CONSTRUCTOR_HOOK = 'reviewerreviewstep3form::Constructor';
+    public const REVIEWER_STEP3_READ_USER_VARS_HOOK = 'reviewerreviewstep3form::readuservars';
 
     /**
      * Register the label overrides and the hooks that adjust the reviewer form.
@@ -60,10 +69,21 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
         // 2) Reorder / disable: adjust the list in the reviewer form only.
         Hook::add('TemplateManager::fetch', [$this, 'filterReviewerForm']);
 
-        // 3) The script of the settings form, on the page that opens it.
-        Hook::add('TemplateManager::display', [$this, 'addSettingsScript']);
+        // 3) A disabled recommendation sent anyway (a form opened before it was
+        //    disabled, or a crafted request) is refused on submit and not saved
+        //    in a draft, unless it is the one the review already holds.
+        $this->addReviewerFormHooks();
 
         return true;
+    }
+
+    /**
+     * Hooks of the reviewer step 3 form that guard the recommendation it stores.
+     */
+    public function addReviewerFormHooks(): void
+    {
+        Hook::add(self::REVIEWER_STEP3_CONSTRUCTOR_HOOK, [$this, 'addRecommendationCheck']);
+        Hook::add(self::REVIEWER_STEP3_READ_USER_VARS_HOOK, [$this, 'keepDraftRecommendation']);
     }
 
     /**
@@ -111,11 +131,17 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
             unset($options['']);
         }
 
+        // The review's own recommendation stays in the list even when it was
+        // disabled later: a saved draft or a reopened review keeps showing it, and
+        // saving again does not drop it.
+        $reviewAssignment = $templateMgr->getTemplateVars('reviewAssignment');
+        $stored = $reviewAssignment ? (int) $reviewAssignment->getRecommendation() : 0;
+
         // Drop disabled options and sort by the configured order.
         $codes = array_keys($options);
         $ordered = [];
         foreach ($codes as $code) {
-            if (!$this->isRecommendationEnabled($contextId, (int) $code)) {
+            if ((int) $code !== $stored && !$this->isRecommendationEnabled($contextId, (int) $code)) {
                 continue;
             }
             $ordered[$code] = [
@@ -135,24 +161,81 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     }
 
     /**
-     * TemplateManager::display hook: queues the script of the settings form on
-     * the website settings page, where the plugins list opens it.
+     * Whether a recommendation sent by a reviewer may be stored: an enabled one,
+     * or the one the review already holds. An empty choice is left to the core,
+     * which requires a recommendation on submit.
      */
-    public function addSettingsScript(string $hookName, array $args): bool
+    public function isRecommendationAllowed(int $contextId, mixed $code, ?int $stored): bool
     {
-        $templateMgr = $args[0];
-        if ($args[1] !== 'management/website.tpl') {
+        if ($code === null || $code === '' || (string) $code === '0') {
+            return true;
+        }
+        if (!is_numeric($code) || (string) (int) $code !== (string) $code) {
+            return false;
+        }
+        $code = (int) $code;
+        if ($stored !== null && $code === $stored) {
+            return true;
+        }
+        return array_key_exists($code, self::getRecommendationKeyMap()) && $this->isRecommendationEnabled($contextId, $code);
+    }
+
+    /**
+     * reviewerreviewstep3form::Constructor hook: on submit, refuses a disabled
+     * recommendation that is not the review's own.
+     */
+    public function addRecommendationCheck(string $hookName, array $args): bool
+    {
+        /** @var Form $form */
+        $form = $args[0];
+        $form->addCheck(new FormValidatorCustom(
+            $form,
+            'recommendation',
+            'required',
+            'plugins.generic.reviewerRecommendationManager.recommendationUnavailable',
+            fn ($code) => $this->isRecommendationAllowed($this->getFormContextId($form), $code, $this->getStoredRecommendation($form))
+        ));
+        return Hook::CONTINUE;
+    }
+
+    /**
+     * reviewerreviewstep3form::readUserVars hook: "Save for Later" does not
+     * validate, so a disabled recommendation that is not the review's own is
+     * replaced there by the one the review already holds.
+     */
+    public function keepDraftRecommendation(string $hookName, array $args): bool
+    {
+        $form = $args[0];
+        $vars = &$args[1];
+        $request = Application::get()->getRequest();
+        if (!$request->getUserVar('isSave') || !in_array('recommendation', $vars, true)) {
             return Hook::CONTINUE;
         }
 
-        $request = Application::get()->getRequest();
-        $templateMgr->addJavaScript(
-            'reviewerRecommendationManagerSettings',
-            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/settingsForm.js',
-            ['contexts' => 'backend']
-        );
-
+        $stored = $this->getStoredRecommendation($form);
+        if (!$this->isRecommendationAllowed($this->getFormContextId($form), $request->getUserVar('recommendation'), $stored)) {
+            $vars = array_values(array_diff($vars, ['recommendation']));
+            $form->setData('recommendation', $stored);
+        }
         return Hook::CONTINUE;
+    }
+
+    /**
+     * The recommendation the review assignment of a reviewer form holds, if any.
+     */
+    protected function getStoredRecommendation(Form $form): ?int
+    {
+        $reviewAssignment = method_exists($form, 'getReviewAssignment') ? $form->getReviewAssignment() : null;
+        $stored = $reviewAssignment ? $reviewAssignment->getRecommendation() : null;
+        return $stored ? (int) $stored : null;
+    }
+
+    /**
+     * The journal of a reviewer form: the one of the request.
+     */
+    protected function getFormContextId(Form $form): int
+    {
+        return (int) Application::get()->getRequest()->getContext()?->getId();
     }
 
     /**
@@ -202,7 +285,9 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
     {
         $label = html_entity_decode((string) $label, ENT_QUOTES | ENT_HTML5, 'UTF-8');
         $label = strip_tags(preg_replace('#<(script|style)\b[^>]*>.*?</\1\s*>#is', '', $label) ?? '');
-        $label = str_replace(['{{', '}}'], ['{ {', '} }'], $label);
+        // Every brace followed by another is split from it, so no run of braces
+        // ({{x}}, {{{x}}}) keeps a pair of Vue delimiters.
+        $label = preg_replace(['/\{(?=\{)/', '/\}(?=\})/'], ['{ ', '} '], $label) ?? '';
 
         return trim(preg_replace('/\s+/u', ' ', $label) ?? '');
     }
@@ -291,8 +376,41 @@ class ReviewerRecommendationManagerPlugin extends GenericPlugin
             }
         }
 
+        // A language removed from the journal's form languages leaves no override behind.
+        self::pruneOverrideLocales($basePath, $context->getSupportedFormLocales());
+
         // Invalidate the locale bundle caches so the new labels apply in this request.
         Locale::registerPath($basePath, PHP_INT_MAX);
+    }
+
+    /**
+     * Delete the override folders of languages that are no longer form
+     * languages of the journal: the settings no longer show their labels, so
+     * they could neither be seen nor changed, yet would keep renaming the
+     * recommendations in that interface language.
+     *
+     * @param string[] $locales the form languages of the journal
+     *
+     * @return string[] the locales whose folder was deleted
+     */
+    public static function pruneOverrideLocales(string $basePath, array $locales): array
+    {
+        $removed = [];
+        foreach (glob(rtrim($basePath, '/') . '/*', GLOB_ONLYDIR) ?: [] as $dir) {
+            $locale = basename($dir);
+            if (in_array($locale, $locales, true)) {
+                continue;
+            }
+            foreach (['locale.po', 'locale.mo'] as $file) {
+                if (is_file("{$dir}/{$file}")) {
+                    unlink("{$dir}/{$file}");
+                }
+            }
+            if (@rmdir($dir)) {
+                $removed[] = $locale;
+            }
+        }
+        return $removed;
     }
 
     /**

@@ -26,7 +26,7 @@ msgstr "Previdno pri preimenovanju oznak"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Preimenovanje oznake velja za nazaj: že oddane recenzije bodo po vsej platformi prikazane z novim besedilom (recenzent, urednik, avtor, e-pošta in API). Če sprememba spremeni POMEN odgovora, raje onemogočite staro možnost in za nov pomen uporabite možnost z 0 recenzijami – tako zapisa ne popačite."
+msgstr "Preimenovanje oznake velja za nazaj: že oddane recenzije bodo po vsej platformi prikazane z novim besedilom (recenzent, urednik, avtor in e-pošta). Če sprememba spremeni POMEN odgovora, raje onemogočite staro možnost in za nov pomen uporabite možnost z 0 recenzijami – tako zapisa ne popačite."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Te možnosti ne uporablja nobena recenzija – varno jo je na novo dolo�
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Onemogočenje odstrani možnost samo iz obrazca recenzenta. Uredniki to priporočilo še naprej vidijo pri prejšnjih recenzijah, ki so ga uporabile."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "V obrazcu za recenzijo ohranite vsaj eno priporočilo. Brez njega recenzenti ne morejo oddati recenzije."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "To priporočilo ni več na voljo. Izberite drugo."

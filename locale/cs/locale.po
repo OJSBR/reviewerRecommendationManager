@@ -26,7 +26,7 @@ msgstr "Pozor při přejmenování popisků"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Přejmenování popisku je zpětné: již odeslané recenze se v celé platformě zobrazí s novým textem (recenzent, editor, autor, e-maily i API). Pokud změna mění VÝZNAM odpovědi, raději vypněte starou možnost a pro nový význam použijte možnost s 0 recenzemi — vyhnete se tak zkreslení záznamu."
+msgstr "Přejmenování popisku je zpětné: již odeslané recenze se v celé platformě zobrazí s novým textem (recenzent, editor, autor i e-maily). Pokud změna mění VÝZNAM odpovědi, raději vypněte starou možnost a pro nový význam použijte možnost s 0 recenzemi — vyhnete se tak zkreslení záznamu."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Tuto možnost nepoužívá žádná recenze — lze ji bezpečně přede
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Vypnutí odebere možnost pouze z formuláře recenzenta. Editoři nadále vidí toto doporučení u dřívějších recenzí, které je použily."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Ponechte ve formuláři recenze dostupné alespoň jedno doporučení. Bez něj recenzenti nemohou recenzi odeslat."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Toto doporučení již není k dispozici. Vyberte prosím jiné."

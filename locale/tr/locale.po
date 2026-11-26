@@ -26,7 +26,7 @@ msgstr "Etiketleri yeniden adlandırırken dikkat"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Bir etiketi yeniden adlandırmak geriye dönük etkilidir: gönderilmiş değerlendirmeler platformun tamamında yeni metinle görünür (hakem, editör, yazar, e-postalar ve API). Değişiklik yanıtın ANLAMINI değiştiriyorsa, eski seçeneği devre dışı bırakıp yeni anlam için 0 değerlendirmesi olan bir seçeneği kullanmak daha iyidir — böylece kayıt çarpıtılmaz."
+msgstr "Bir etiketi yeniden adlandırmak geriye dönük etkilidir: gönderilmiş değerlendirmeler platformun tamamında yeni metinle görünür (hakem, editör, yazar ve e-postalar). Değişiklik yanıtın ANLAMINI değiştiriyorsa, eski seçeneği devre dışı bırakıp yeni anlam için 0 değerlendirmesi olan bir seçeneği kullanmak daha iyidir — böylece kayıt çarpıtılmaz."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Bu seçeneği hiçbir değerlendirme kullanmıyor — güvenle yeniden t
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Devre dışı bırakmak seçeneği yalnızca hakem formundan kaldırır. Editörler bu öneriyi, onu kullanmış geçmiş değerlendirmelerde görmeye devam eder."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Değerlendirme formunda en az bir öneriyi kullanılabilir bırakın. Hiçbiri olmadan hakemler değerlendirmelerini gönderemez."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Bu öneri artık kullanılamıyor. Lütfen başka bir öneri seçin."

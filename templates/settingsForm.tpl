@@ -12,6 +12,7 @@
  * hoisted out by the HTML parser and ended up attached to the next item.
  *}
 <link rel="stylesheet" href="{$rrmStyleUrl|escape}">
+<script src="{$rrmScriptUrl|escape}"></script>
 <script>
 	$(function() {ldelim}
 		$('#reviewerRecommendationManagerSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');

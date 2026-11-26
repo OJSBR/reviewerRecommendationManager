@@ -26,7 +26,7 @@ msgstr "Внимание при преименуване на етикетите
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Преименуването на етикет е с обратна сила: вече подадените рецензии ще се показват с новия текст в цялата платформа (рецензент, редактор, автор, имейли и API). Ако промяната изменя СМИСЪЛА на отговора, по-добре изключете старата опция и използвайте за новия смисъл опция с 0 рецензии — така не се подменя записът."
+msgstr "Преименуването на етикет е с обратна сила: вече подадените рецензии ще се показват с новия текст в цялата платформа (рецензент, редактор, автор и имейли). Ако промяната изменя СМИСЪЛА на отговора, по-добре изключете старата опция и използвайте за новия смисъл опция с 0 рецензии — така не се подменя записът."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Никоя рецензия не използва тази опция �
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Изключването премахва опцията само от формуляра за рецензия. Редакторите продължават да виждат тази препоръка в предишните рецензии, които са я използвали."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Оставете поне една препоръка достъпна във формуляра за рецензия. Без нея рецензентите не могат да подадат рецензията си."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Тази препоръка вече не е налична. Моля, изберете друга."

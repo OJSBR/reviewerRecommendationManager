@@ -21,7 +21,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Wees voorzichtig bij het hernoemen van labels"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Een label hernoemen werkt met terugwerkende kracht: al ingediende beoordelingen worden in het hele platform met de nieuwe tekst weergegeven (beoordelaar, redacteur, auteur, e-mails en API). Verandert de wijziging de BETEKENIS van het antwoord, schakel dan liever de oude optie uit en gebruik voor de nieuwe betekenis een optie met 0 beoordelingen — zo vervalst u het register niet."
+msgstr "Een label hernoemen werkt met terugwerkende kracht: al ingediende beoordelingen worden in het hele platform met de nieuwe tekst weergegeven (beoordelaar, redacteur, auteur en e-mails). Verandert de wijziging de BETEKENIS van het antwoord, schakel dan liever de oude optie uit en gebruik voor de nieuwe betekenis een optie met 0 beoordelingen — zo vervalst u het register niet."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Oorspronkelijke OJS-aanbeveling"
@@ -43,3 +43,9 @@ msgstr "Geen enkele beoordeling gebruikt deze optie — die kan veilig opnieuw w
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Uitschakelen verwijdert de optie alleen uit het beoordelingsformulier. Redacteuren blijven deze aanbeveling zien bij eerdere beoordelingen die haar gebruikten."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Houd ten minste één aanbeveling beschikbaar in het beoordelingsformulier. Zonder aanbeveling kunnen beoordelaars hun beoordeling niet indienen."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Deze aanbeveling is niet meer beschikbaar. Kies een andere."

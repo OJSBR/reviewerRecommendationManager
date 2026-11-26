@@ -26,7 +26,7 @@ msgstr "Etiketləri adlandırarkən diqqətli olun"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Etiketin adının dəyişməsi geriyə şamil olunur: artıq göndərilmiş rəylər bütün platformada yeni mətnlə görünəcək (rəyçi, redaktor, müəllif, e-poçtlar və API). Əgər dəyişiklik cavabın MƏNASINI dəyişirsə, köhnə variantı deaktiv edib yeni məna üçün heç bir rəydə istifadə olunmayan variantı götürmək daha yaxşıdır — bu, qeydlərin təhrif olunmasının qarşısını alır."
+msgstr "Etiketin adının dəyişməsi geriyə şamil olunur: artıq göndərilmiş rəylər bütün platformada yeni mətnlə görünəcək (rəyçi, redaktor, müəllif və e-poçtlar). Əgər dəyişiklik cavabın MƏNASINI dəyişirsə, köhnə variantı deaktiv edib yeni məna üçün heç bir rəydə istifadə olunmayan variantı götürmək daha yaxşıdır — bu, qeydlərin təhrif olunmasının qarşısını alır."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Bu variantı heç bir rəy istifadə etmir — təhlükəsiz şəkildə 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Deaktivləşdirmə variantı yalnız rəyçi formasından silir. Redaktorlar bu tövsiyəni ondan istifadə etmiş keçmiş rəylərdə görməkdə davam edir."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Rəy formasında ən azı bir tövsiyəni aktiv saxlayın. Onsuz rəyçilər rəylərini göndərə bilməz."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Bu tövsiyə artıq mövcud deyil. Zəhmət olmasa, başqasını seçin."

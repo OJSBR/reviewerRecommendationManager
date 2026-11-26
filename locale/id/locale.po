@@ -26,7 +26,7 @@ msgstr "Hati-hati saat mengganti nama label"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Mengganti nama label bersifat surut: telaah yang sudah dikirim akan tampil dengan teks baru di seluruh platform (penelaah, editor, penulis, surel, dan API). Jika perubahan mengubah MAKNA jawaban, sebaiknya nonaktifkan opsi lama dan gunakan opsi dengan 0 telaah untuk makna yang baru — ini menghindari pemalsuan catatan."
+msgstr "Mengganti nama label bersifat surut: telaah yang sudah dikirim akan tampil dengan teks baru di seluruh platform (penelaah, editor, penulis, dan surel). Jika perubahan mengubah MAKNA jawaban, sebaiknya nonaktifkan opsi lama dan gunakan opsi dengan 0 telaah untuk makna yang baru — ini menghindari pemalsuan catatan."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Tidak ada telaah yang memakai opsi ini — aman untuk didefinisikan ulan
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Menonaktifkan hanya menghapus opsi dari formulir penelaah. Editor tetap melihat rekomendasi ini pada telaah terdahulu yang memakainya."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Sisakan setidaknya satu rekomendasi yang tersedia di formulir telaah. Tanpa itu, penelaah tidak dapat mengirim telaahnya."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Rekomendasi ini sudah tidak tersedia. Silakan pilih yang lain."

@@ -26,7 +26,7 @@ msgstr "Vær forsiktig når du gir etiketter nytt navn"
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Å gi en etikett nytt navn virker tilbake i tid: allerede innsendte vurderinger vises med den nye teksten i hele plattformen (fagfelle, redaktør, forfatter, e-post og API). Hvis endringen endrer svarets BETYDNING, bør du heller deaktivere det gamle alternativet og bruke et alternativ med 0 vurderinger til den nye betydningen – slik forfalskes ikke registreringen."
+msgstr "Å gi en etikett nytt navn virker tilbake i tid: allerede innsendte vurderinger vises med den nye teksten i hele plattformen (fagfelle, redaktør, forfatter og e-post). Hvis endringen endrer svarets BETYDNING, bør du heller deaktivere det gamle alternativet og bruke et alternativ med 0 vurderinger til den nye betydningen – slik forfalskes ikke registreringen."
 
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
@@ -55,3 +55,11 @@ msgstr "Ingen fagfellevurderinger bruker dette alternativet – det kan trygt de
 #, fuzzy
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Deaktivering fjerner alternativet bare fra fagfelleskjemaet. Redaktørene ser fortsatt denne anbefalingen i tidligere vurderinger som brukte den."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Behold minst én anbefaling tilgjengelig i vurderingsskjemaet. Uten den kan fagfeller ikke sende inn vurderingen sin."
+
+#, fuzzy
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "Denne anbefalingen er ikke lenger tilgjengelig. Velg en annen."

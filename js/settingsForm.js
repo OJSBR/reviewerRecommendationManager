@@ -5,7 +5,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Drag-and-drop ordering and the enabled state of the recommendation cards in
- * the settings form. Called by the form template once the modal is shown.
+ * the settings form. Loaded and called by the form template, so it works in a
+ * modal opened right after the plugin is enabled, without a page reload.
  */
 (function ($) {
 	'use strict';

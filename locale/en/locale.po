@@ -23,7 +23,7 @@ msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.titl
 msgstr "Care when renaming labels"
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.historyNotice.body"
-msgstr "Renaming a label is retroactive: reviews already submitted will display with the new text across the whole platform (reviewer, editor, author, e-mails and API). If the change alters the MEANING of the answer, prefer disabling the old option and repurposing an option with 0 reviews for the new meaning — this avoids falsifying the record."
+msgstr "Renaming a label is retroactive: reviews already submitted will display with the new text across the whole platform (reviewer, editor, author and e-mails). If the change alters the MEANING of the answer, prefer disabling the old option and repurposing an option with 0 reviews for the new meaning — this avoids falsifying the record."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.originalLabel"
 msgstr "Original OJS recommendation"
@@ -45,3 +45,9 @@ msgstr "0 reviews use this option — safe to redefine."
 
 msgid "plugins.generic.reviewerRecommendationManager.settings.disableNote"
 msgstr "Disabling removes the option only from the reviewer form. Editors still see this recommendation on past reviews that used it."
+
+msgid "plugins.generic.reviewerRecommendationManager.settings.noneEnabled"
+msgstr "Keep at least one recommendation available in the reviewer form. Without one, reviewers cannot submit their review."
+
+msgid "plugins.generic.reviewerRecommendationManager.recommendationUnavailable"
+msgstr "This recommendation is no longer available. Please choose another one."
