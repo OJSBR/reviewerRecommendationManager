@@ -1,10 +1,10 @@
 # Reviewer Recommendation Manager — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-2.0.0.0%20(OJS%203.5)%20%7C%201.0.5.0%20(OJS%203.4)-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-5.0.0.0%20(OJS%203.5)%20%7C%204.0.0.0%20(OJS%203.4)-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/2.0.0.0/reviewerRecommendationManager-2.0.0.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/1.0.5.0/reviewerRecommendationManager-1.0.5.0.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/5.0.0.0/reviewerRecommendationManager-5.0.0.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/reviewerRecommendationManager/releases/download/4.0.0.0/reviewerRecommendationManager-4.0.0.0.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that lets a journal **rename
 (multilingual), reorder and disable** the recommendations a reviewer picks when completing a
@@ -21,12 +21,12 @@ OJS core** and **preserving the historical record** of reviews already submitted
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 2.0.0.0 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.5.0 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 5.0.0.0 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 4.0.0.0 |
 
-The first number of a release names the OJS line (1 = OJS 3.4, 2 = OJS 3.5), so a journal that
+The first number of a release names the OJS line (3 = OJS 3.3, 4 = OJS 3.4, 5 = OJS 3.5), so a journal that
 upgrades OJS is always offered the newer line. The second follows OJS's minor version (a build
-only for OJS 3.5.1 would be 2.1.0.0); the last two count the plugin's own changes.
+only for OJS 3.5.1 would be 5.1.0.0); the last two count the plugin's own changes.
 
 > **OJS 3.6 note.** PKP has implemented customizable reviewer recommendations in the core
 > for OJS 3.6 ([pkp/pkp-lib#1660](https://github.com/pkp/pkp-lib/issues/1660)). This plugin
@@ -136,7 +136,7 @@ Tests are kept in the repository and are not part of the release package.
   the same need; this plugin covers OJS 3.4 and 3.5 until then.
 - Thanks to **Bozana Bokan** (PKP) for the plugin gallery review
   ([pkp/plugin-gallery#513](https://github.com/pkp/plugin-gallery/pull/513)) that shaped
-  releases 2.0.0.0 and 1.0.5.0.
+  releases 5.0.0.0 and 4.0.0.0.
 - Distributed under the **GNU GPL v3**.
 
 ## AI use
@@ -173,12 +173,12 @@ avaliação (Aceitar, Correções obrigatórias, Submeter novamente, Rejeitar, V
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 2.0.0.0 |
-| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 1.0.5.0 |
+| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 5.0.0.0 |
+| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 4.0.0.0 |
 
-O primeiro número da release indica a linha do OJS (1 = OJS 3.4, 2 = OJS 3.5), para que a revista
+O primeiro número da release indica a linha do OJS (3 = OJS 3.3, 4 = OJS 3.4, 5 = OJS 3.5), para que a revista
 que atualiza o OJS sempre receba a linha mais nova. O segundo acompanha a versão menor do OJS (um
-build só para o OJS 3.5.1 seria 2.1.0.0); os dois últimos contam as mudanças do próprio plugin.
+build só para o OJS 3.5.1 seria 5.1.0.0); os dois últimos contam as mudanças do próprio plugin.
 
 As duas branches têm o mesmo código. As pastas de idioma seguem os códigos de cada linha do OJS
 (OJS 3.4: `fr_FR`, `pt_PT`, `nb`, `sr@latin`, `zh_CN`; OJS 3.5: `fr`, `pt`, `nb_NO`, `sr_Latn`,
@@ -254,7 +254,7 @@ e não vão no pacote de release.
   necessidade; este plugin atende o OJS 3.4 e 3.5 até lá.
 - Agradecimento a **Bozana Bokan** (PKP) pela revisão na galeria de plugins
   ([pkp/plugin-gallery#513](https://github.com/pkp/plugin-gallery/pull/513)), que moldou as releases
-  2.0.0.0 e 1.0.5.0.
+  5.0.0.0 e 4.0.0.0.
 - Distribuído sob a **GNU GPL v3**.
 
 ### Uso de IA
